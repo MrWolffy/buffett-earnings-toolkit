@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+
+.venv/
+.uv-cache/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# All generated analyses, calendars, checkpoints, reports, and logs stay local.
+outputs/
