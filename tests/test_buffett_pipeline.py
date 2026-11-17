@@ -166,13 +166,13 @@ class BuffettOutputParsingTests(unittest.TestCase):
 
         self.assertEqual([request["custom_id"] for request in requests], ["00000_BRK_B", "00001_BRK_B"])
 
-    def test_structuring_payload_uses_mini_model_and_json_schema(self):
+    def test_structuring_payload_preserves_requested_model_and_json_schema(self):
         snapshot = {"ticker": "AAPL", "company_name": "Apple Inc.", "currency": "USD"}
         prompt = bp.build_buffett_structure_prompt("Apple has a durable consumer ecosystem.", snapshot, "2026-05-21")
 
-        payload = bp.build_structured_response_payload(prompt, bp.DEFAULT_STRUCTURING_MODEL)
+        payload = bp.build_structured_response_payload(prompt, "test-structuring-model")
 
-        self.assertEqual(payload["model"], "gpt-5.4-mini")
+        self.assertEqual(payload["model"], "test-structuring-model")
         self.assertEqual(payload["text"]["format"]["type"], "json_schema")
         self.assertIn("Convert a Buffett-style prose", payload["input"][0]["content"])
 

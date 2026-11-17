@@ -1,327 +1,280 @@
-# Valuation, Capital Allocation, and Special Instruments
+# 06｜估值、资本配置与实际机会成本
 
-> When to read this file: When calculating intrinsic value, determining margin of safety, evaluating capital allocation decisions (buybacks/dividends/retained earnings), or analyzing arbitrage and special investment opportunities.
+> **版本：2.0｜修订日期：2026-10-22**  
+> 适用：内在价值、买点、安全边际、回购、分红、现金用途、换仓及特殊证券。  
+> 来源标记遵循 [SOURCES.md](../SOURCES.md)。模型、示例、账户流程与决策表为 P。
 
-## Intrinsic Value Estimation
+## 1. 估值前的最低条件
 
-> "Intrinsic value is the discounted estimate of the cash flows that can be taken out of a business during its remaining life. For most companies, this has nothing to do with book value." — 1993 Letter
+先确定估值对象是整个经营企业、普通股、优先股、债券，还是控股集团的一部分。确认货币、估值时点、现金流归属及资本结构。
 
-### Method 1: Owner Earnings Multiple (Most Common)
+没有完成利润到现金的桥接时，先读 [05-financial-metrics.md](05-financial-metrics.md)。不能用未经调整的 EBITDA、毛现金流或增长性所有者盈余直接乘一个“巴菲特倍数”。
 
-Applicable to: **stable, predictable, mature businesses**
+所有估值都应给出：核心假设、必要投入、可预测范围、主要反证和价值对关键变量的敏感性。可靠性来自经济证据，不来自模型复杂程度。
 
-```
-Intrinsic Value ≈ Normalized Owner Earnings × Appropriate Multiple
-```
+## 2. 四种可以组合使用的方法（P）
 
-**Normalization**: Exclude one-time items, use a 3–5 year average, reflecting the earning power of a "normal operating year."
+| 方法 | 适用条件 | 核心局限 |
+|---|---|---|
+| 现金流折现 | 能合理估计现金产出、投入与持续时间 | 终值及长期假设可能主导结果 |
+| 正常化盈利/现金能力资本化 | 经营相对稳定且能够解释合理回报要求 | 倍数必须对应增长、投入和风险，不能按标签套表 |
+| 分部与资产价值 | 多业务集团、投资资产、可兑现资产 | 防止双算、忽略税费与实际处置限制 |
+| 有限寿命/事件现金回收 | 衰退业务、清算、并购或其他明确事件 | 实现路径、时间、失败后果与流动性至关重要 |
 
-**Reference Multiples:**
+方法之间用于解释差异和交叉验证，不是取平均就更可靠。对周期企业，先正常化价格、利用率、成本及资本需求；不能认为取七到十年平均就必然代表未来。
 
-| Business Characteristics | Appropriate Multiple |
-|---------|---------|
-| Wide moat + 5%+ growth + asset-light | 20–25x |
-| Solid moat + moderate 3–5% growth | 15–20x |
-| Average moat + low growth | 10–15x |
-| Narrow moat + competitive threats | 8–12x |
-| Cyclical / declining business | < 8x |
+## 3. 贴现率：区分原始思想与项目工具
 
-### Method 2: Discounted Cash Flow (Simplified)
+### 3.1 巴菲特公开表述的范围
 
-Applicable to: **businesses with a clear growth trajectory**
+**B｜历史问答。**1996 年股东大会以长期国债利率作为估值参照，并提到利率极低时可能采用较高值；1997 年问答进一步区分这种参照与实际愿意接受的投资回报。[A-1996-AM](../SOURCES.md#a-1996-am)、[A-1997-PM](../SOURCES.md#a-1997-pm)
 
-Buffett does not use complex DCF spreadsheets, but performs simple mental arithmetic:
-```
-Intrinsic Value = Sum of present values of owner earnings over the next 10 years (estimated year by year)
-               + Terminal value after year 10 (using a perpetual growth model)
-```
+这不能改写成“无风险利率 + 3%—5% 是巴菲特标准”，也不能改写成“所有股票机械使用国债利率就是巴菲特方法”。理解现金流及其可靠程度，不能被一个利率参数取代。
 
-Discount rate: Risk-free rate + 3–5% (company-specific risk premium)
+### 3.2 项目估值时必须说明的四件事（P）
 
-**Practical note:** If the calculated intrinsic value is highly sensitive to the discount rate (changing by 1% causes a large swing), the valuation is unreliable and a larger margin of safety is required.
+| 项目 | 含义 |
+|---|---|
+| 参照利率 | 与现金流币种、期限及名义/实际口径相符的基准 |
+| 模型折现率 | 本次采用的计算参数及理由；如使用风险调整法，明确它属于现代工具 |
+| 投资者要求的回报 | 在个人资金期限、损失承受和流动性条件下的要求 |
+| 实际机会成本 | 当前可执行替代用途提供的经济机会，需按第 9 节核实 |
 
-### Method 3: Historical Earnings Power Method (Graham Tradition)
+现金流采用名义值，利率也应是名义口径；税前税后、币种和权益/企业价值口径应匹配。不要把不确定性在现金流、折现率和折价中无说明地重复惩罚，也不能完全不处理。
 
-Applicable to: **cyclical industries, or when a quick estimate is needed**
+严重无法理解的风险不应仅靠提高折现率解决。能够界定的不确定性则可以通过情景、概率范围、保守假设、价格和仓位处理。概率没有可信依据时，不给装饰性的精确数字。
 
-- Use average earnings over the past 7–10 years, not the most recent year
-- Apply a conservative multiple (10–15x)
-- Well suited for industries with pronounced cycles: banking, resources, retail
+## 4. 从现金流到价值：模型一致性
 
----
+**B｜价值基础。**1992 年股东信把未来现金流入和流出联系起来；1998 年问答强调增长所需资金不能同时算作可提取现金。[B-1992](../SOURCES.md#b-1992)、[A-1998-PM](../SOURCES.md#a-1998-pm)
 
-## Margin of Safety
+### 4.1 一般框架（P）
 
-> "The three most important words: margin of safety, margin of safety, margin of safety." — Benjamin Graham
-
-**In practice: Purchase price = Intrinsic value × 60–70%**
-
-**Three key elements:**
-
-1. **Humility about cognitive limits**: Even with extensive experience, estimates of future cash flows can be wrong. Margin of safety compensates for unavoidable errors.
-
-2. **Not the same as "cheap"** (a common misconception): A low P/E ratio does not equal a margin of safety. The key is the relationship between **price and true value**, not the price level itself. A company whose moat is narrowing has no margin of safety even at 8x earnings.
-
-3. **Dynamic, not static**: The same business at different times commands different prices and therefore different margins of safety. In 1997, Buffett publicly warned that prevailing price levels had "significantly eroded the margin of safety" — a judgment validated three years later when the dot-com bubble burst.
-
-**The required margin of safety increases with business uncertainty:**
-- Highly certain, excellent businesses (Coca-Cola): 20–30% discount
-- Generally excellent businesses: 30–40% discount
-- Businesses with uncertain factors: 40–50% discount
-- Businesses whose intrinsic value cannot be reliably estimated: do not invest
-
----
-
-## The Relationship Between Purchase Price and Intrinsic Value
-
-**Core proposition: Price determines return**
-
-The gap between the purchase price and intrinsic value determines the ultimate fate of an investment. Even if a business's intrinsic value grows steadily, an excessive purchase price can wipe out years of strong performance.
-
-> "For the investor, a too-high purchase price for the stock of an excellent company can undo the effects of a subsequent decade of favorable business developments." — 1982 Buffett Letter to Shareholders
-
-> "Sometimes the price offered for a fine business is so high that even a fine business can turn into a terrible investment — if not permanently, at least painfully long." — 2018 Buffett Letter to Shareholders
-
-**The intellectual shift from "cigar butts" to "great companies at fair prices":**
-
-Early Buffett pursued extremely low purchase prices (Graham-style); later, influenced by Munger, he shifted to buying excellent businesses at fair prices.
-
-> "It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price. Charlie understood this early; I was a slow learner." — 1989 Buffett Letter to Shareholders
-
-> "More than 50 years ago, Charlie told me that it is far better to buy a wonderful business at a fair price than a so-so business at a wonderful price. Despite the compelling logic of his position, I have sometimes reverted to my old habit of bargain-hunting, with results ranging from mediocre to disastrous." — 2012 Buffett Letter to Shareholders
-
-**Four dimensions of a fair price (1976 stock selection criteria):**
-1. Favorable long-term economic characteristics
-2. Competent and honest management
-3. **A purchase price that is attractive by private-ownership standards** (the third leg)
-4. An industry within one's circle of competence
-
-**The principle of locking in profit at purchase:**
-> "Whether or not we are active or passive investors in a control situation, there is one thing we must do: we must make our profits through purchase price. The prerequisite to buying a controlling interest is an attractive purchase price." — 1963 Buffett Letter to Partners
-
-**The long-term interplay between purchase price and retained earnings:**
-> "If the business earns at a reasonable rate on the price paid, the market almost has to eventually recognize retained earnings' cumulative effect. Occasionally you even receive frosting on the cake — market appreciation far in excess of accumulated retained earnings since purchase." — 1980 Buffett Letter to Shareholders
-
-**Common misconceptions:**
-- "Fair price" ≠ "high price": Even the best businesses can be priced too high
-- "Cheap" ≠ "below intrinsic value": A $100 stock can be cheaper than a $10 stock (what matters is the gap to intrinsic value)
-- "Conservative" ≠ "holding well-known blue-chip stocks": True conservatism means buying at a fair price; talking about conservatism without mentioning purchase price is meaningless
-
----
-
-## Capital Allocation Analysis
-
-Evaluating management's "wisdom with capital." Buffett views capital allocation as a CEO's most important responsibility:
-
-> "The heads of many companies are not skilled in capital allocation. Their inadequacy is not surprising. Most bosses rise to the top because they have excelled in an area such as marketing, production, engineering, administration or, sometimes, institutional politics. Once they become CEOs, they face new responsibilities. They now must make capital allocation decisions, a critical job that they may have never tackled and that is not easily mastered." — 1987 Buffett Letter to Shareholders
-
-**The "One Dollar Test" (Buffett's standard):**
-> "Unrestricted earnings should be retained only when there is a reasonable prospect — backed preferably by historical evidence or, when appropriate, by a thoughtful analysis of the future — that for every dollar retained by the corporation, at least one dollar of market value will be created for owners." — 1984 Buffett Letter to Shareholders
-
-**The complete five-path capital allocation framework:**
-
-| Path | When to Prioritize | Key Decision Criteria |
-|-----|------------|------------|
-| Reinvest in existing business | High ROIC, moat-backed, reliable organic growth | Does incremental return exceed cost of capital? |
-| Acquire businesses (full ownership) | Fair price, excellent management, understandable business | Fair price is "the third leg" — non-negotiable |
-| Purchase minority stakes in public companies | Price below intrinsic value, no suitable acquisition targets | Berkshire's unique "both/and" advantage |
-| Repurchase stock | Share price clearly below intrinsic value | See the buyback analysis section below |
-| Pay dividends | When none of the above options offer better returns | Management should honestly acknowledge no better use exists |
-
-> "Charlie and I have truly easy jobs at Berkshire. We do almost nothing except allocate capital. And we're not even particularly diligent." — 1998 Buffett Letter to Shareholders
-
-**Berkshire's "both/and" advantage:**
-The ability to acquire businesses outright and also purchase minority stakes in the public market. This flexibility gives Berkshire an entire additional universe of investment opportunities compared to companies that can only do controlling acquisitions. "The world is more varied than most people realize. A bisexual greatly increases the probability of a date on Saturday night." (quoting Woody Allen, 2013 Letter)
-
-**The curse of scale (an important limitation):**
-> "There are only a handful of companies in this country capable of truly moving the needle at Berkshire, and they are constantly being evaluated by us and by others. In summary, we are not able to have an out-of-sight performance." — 2023 Buffett Letter to Shareholders
-
-**Key questions for evaluating management's capital allocation quality:**
-- Does the incremental return on retained earnings consistently exceed the cost of capital?
-- Is management engaged in "empire-building" acquisitions in areas where they have no edge?
-- When repurchasing shares, is there a clear intrinsic value basis for doing so?
-- When no good opportunities exist, does management have the patience to hold cash?
-
----
-
-## Share Buyback Analysis
-
-**The only legitimate reason: price is clearly below intrinsic value**
-
-> "Saying that you plan to repurchase shares 'to offset dilution from option grants' or because management has 'faith in the company' is not sufficient reason. Unless the repurchase price is below intrinsic value, continuing shareholders are harmed. The first law of capital allocation — whether the money is slated for acquisitions or share repurchases — is that what is smart at one price is stupid at another." — 2011 Buffett Letter to Shareholders
-
-**The structural advantage of buybacks over acquisitions:**
-> "If a fine business can be bought in the market at a price well below what it would cost to acquire the entire business in a negotiated deal, why should the company not repurchase its shares aggressively? Competitive bidding in the acquisition market almost ensures that the full price — and frequently more — must be paid for an entire business." — 1980 Buffett Letter to Shareholders
-
-**The indirect value of buybacks by investees (often overlooked):**
-When investees such as Coca-Cola, Apple, and American Express repurchase their shares, Berkshire's ownership percentage rises automatically, with no additional outlay.
-
-> "The lower the price, the more advantageous these repurchase programs are to our benefit: when a company's stock is cheap, it can buy back more shares with the same amount of money, indirectly increasing our ownership percentage." — 1997 Buffett Letter to Shareholders
-
-> "In 2022, we increased your share of our exceptional collection of businesses via repurchases of Berkshire shares as well as similar moves at Apple and American Express. At Berkshire, we directly increased your interest in our unique collection of businesses by repurchasing 1.2% of our outstanding shares." — 2022 Buffett Letter to Shareholders
-
-**The tax logic of buybacks vs. dividends:**
-Coca-Cola repurchasing its own shares vs. paying dividends for Berkshire to then reinvest: under the dividend route, taxes must be paid first before reinvesting, resulting in fewer shares purchased. "Yet, paradoxically, if Berkshire takes the less efficient route, our reported earnings would be higher." (1990 Letter)
-
-**The GEICO classic case study (compounding effect of sustained buybacks):**
-Between 1976 and 1980, Berkshire invested $47 million to acquire approximately one-third of GEICO. GEICO then continuously bought back its own shares on a large scale, and Berkshire's ownership percentage grew to approximately 50% with no additional purchases. In 1996, Berkshire acquired the remaining 50% for $2.3 billion — roughly 50 times the initial cost.
-
-**The evolution of Berkshire's own buyback program:**
-- 2012: Set 120% of book value as the buyback trigger (reasonable, since intrinsic value far exceeded that level)
-- Post-2018: Eliminated the fixed multiple; adopted a flexible standard of "when both Buffett and Munger believe the price is below a conservative estimate of intrinsic value"
-- 2020: Repurchased approximately 5% of shares outstanding; continued active buybacks in 2022
-
-**Three key questions for evaluating buyback discipline:**
-1. Is there a clear intrinsic value estimate underlying the decision, or is management simply saying "the stock is cheap"?
-2. Do buybacks accelerate when the stock price falls (correct), or does the company buy heavily when prices rise (incorrect)?
-3. After buybacks, does the company still maintain adequate liquidity and a margin of safety?
-
----
-
-## Dividends, Retained Earnings, and Tax Efficiency
-
-### The One Dollar Test
-
-**The core standard for judging whether retaining earnings is justified:**
-
-> "Unrestricted earnings should be retained only when each dollar retained generates at least one dollar of market value." — 1984 Letter
-
-```
-Every $1 of retained earnings → should create ≥ $1 of market value increase
-If the ratio is consistently below 1:1 → the money should be returned to shareholders
+```text
+V0 = Σ [FCF_t / (1+r_t)^t] + 终值现值
 ```
 
-**Restricted earnings vs. unrestricted earnings (an important distinction):**
-- **Restricted earnings**: The portion a business must reinvest to maintain its competitive position — effectively "held hostage" by the business; nominally earnings but in reality a capital requirement
-- **Unrestricted earnings**: The truly discretionary portion, and the only amount relevant to dividend decisions
-- During high-inflation periods, all reported earnings of capital-intensive businesses may be "restricted" — paying dividends under such conditions is effectively eroding the capital base
+这里采用逐期等效年化折现率写法；若使用逐期不同的单期利率，应以各期 `(1+r)` 的连乘作为折现因子，不能混用。`FCF` 采用 FCFF 还是 FCFE，决定输出企业价值还是股权价值。
 
-**The decision logic for dividends vs. retained reinvestment:**
-- Management can deploy capital at a return exceeding shareholders' opportunity cost → retain
-- No better investment opportunities exist → pay dividends or buy back shares
+```text
+稳态永续终值（仅在条件成立时）：
+TV_T = FCF_(T+1) / (r - g)，且 r > g
+```
 
-**Why Berkshire has never paid a dividend:**
-Buffett believes he can create more than one dollar of value for every dollar of retained earnings. Once that condition no longer holds, he has pledged to begin paying dividends. Berkshire ranked first in the U.S. in retained earnings in both 2015 and 2016, "by a margin of several billion dollars over the runner-up. Those re-invested funds must earn their keep." (2016 Letter)
+终值必须包含维持竞争地位与终值增长所需的投入，不能在预测期扣投资、到终值阶段突然假设增长免费。对优势消退、资产寿命有限或可能收缩的业务，考虑回报衰减、有限现金回收或清算路径，而不是默认永久增长。
 
-**Admiration for dividend growth at investee companies:**
-> "In 1994, we received $75 million in cash dividends from Coca-Cola. In 2022, Coca-Cola paid us $704 million. Growth occurred every year, just as certain as birthdays. All Charlie and I were required to do was cash Coca-Cola's quarterly dividend checks." — 2022 Buffett Letter to Shareholders
+预测期按业务可预测程度和经济过程确定，不统一规定十年。披露终值对整体价值的影响；终值占比高意味着长期假设重要，不自动意味着估值错误。
 
-### Book Value and Its Limitations
+### 4.2 倍数是现金流假设的缩写
 
-**Definition:** Total assets − Total liabilities = Shareholders' equity (book value)
+```text
+在现金流可持续、稳态且口径匹配时：
+V0 / FCF_1 = 1 / (r - g)
+```
 
-**Buffett's evolving view of book value:**
-- **1965–1993**: Used growth in book value per share as the core metric for measuring Berkshire's performance
-- **Post-1993**: Recognized that the gap between intrinsic value and book value was widening
-- **2018**: Formally abandoned book value as the lead metric on the annual report's first page
+这个关系并未说明多少倍市盈率“合理”，因为利润与可分配现金可能不同。先说明盈利质量、投入、增长持续性和资本结构，再决定倍数能否作近似。
 
-> "This scorecard is becoming increasingly disconnected from economic reality." — 2018 Letter
+删除按“宽护城河 20—25 倍、普通企业 10—15 倍”等固定对应表。历史和同业倍数可用于理解定价，但不能独立证明价值。
 
-**Three reasons for the disconnect:**
-1. Wholly owned subsidiaries are carried at historical acquisition cost, far below their actual value
-2. Insurance float is recorded as a liability on the balance sheet, obscuring its hidden value
-3. Share buybacks above book value reduce book value while increasing intrinsic value
+### 4.3 必做的双算检查
 
-**Practical implication:** Book value is a quick reference, not a basis for valuation. Any investment thesis based on book value must explain the true earning power that underlies it.
+- 计入未来增长，是否也计入实现它所需投入？
+- 经营价值与单独加回的现金/投资资产，是否重复包含投资收益？
+- 负债、租赁、养老金和少数股东，是否遗漏或重复扣除？
+- 被投资企业是否既按资产价值计价，又被资本化其全部穿透收益？
+- 股权薪酬、期权及未来增发，是否消失或被重复惩罚？
+- 业务分拆是否重复分配总部成本、客户关系或协同价值？
 
-### P/E Ratio: The Correct Way to Use It
+## 5. 安全边际：解释错误容忍度，不规定统一折扣
 
-> "A price-earnings ratio, per se, tells you nothing about value unless it can be tied to the company's future stream of cash flows."
+**B｜边界依据。**2007 年股东大会相关片段说明，优秀企业不一定需要很大的价格折扣。安全边际不能简化成统一折扣表。[A-2007-MOS](../SOURCES.md#a-2007-mos)
 
-**Key insight: The same P/E ratio represents entirely different value depending on the business:**
-- A business with a franchise: a 25x after-tax P/E may be reasonable
-- An ordinary cyclical business: 25x represents serious overvaluation
+**P｜计算与判断分开。**
 
-**Principles for using P/E ratios:**
-- Interpret in the context of the interest rate environment (a lower-rate environment justifies higher multiples)
-- Do not make cross-industry comparisons
-- Focus on earnings quality, not the multiple itself
-- Historical P/E ratios do not guide future value
+```text
+相对某一估值 V 的价格折扣 = (V - P) / V
+相对当前价格 P 的潜在上涨空间 = (V - P) / P
+```
 
-> "Guessing the business value at which the public will capitalize the earnings of any particular business has nothing to do with being conservative." — 1961 Letter
+两者分母不同，不能混称。若价值是区间，折扣也只能是条件式区间；区间低端不是保本保证。
 
-### Tax Efficiency
+安全边际应解释：哪些假设可以错到什么程度、错了之后还剩什么现金或资产、是否会先失去流动性，以及价格是否已经容纳了这些后果。
 
-**Core insight: Tax deferral = an interest-free loan from the government**
+下列说法都不成立：低市盈率等于安全；高质量不必看价格；护城河收窄后任何价格都不安全；未知风险越大只要折价越大就能买。
 
-> "In economic substance, this liability resembles an interest-free loan from the U.S. Treasury — one with a repayment date entirely of our choosing." — 1989 Buffett Letter to Shareholders
+### 5.1 买入价是条件，不是永久坐标
 
-**The "Rip Van Winkle" comparison (a classic example from the 1989 Letter):**
-Both scenarios: $1 doubles every year for 20 years (a 20-fold increase):
-- **Long-term hold (no selling)**: Final after-tax value of approximately $692,000
-- **Sell and reinvest annually (frequent trading)**: Final after-tax value of approximately $25,250
+可根据一致的情景及回报要求，反推可接受价格；但应同时给出经营前提、证据状态、账户适配和失效条件。
 
-A roughly 27:1 difference, caused solely by the timing of tax payments. The government collects the exact same percentage of tax in both cases, but "has to wait much longer to receive it."
+```text
+条件式行动价：在假设 A、B、C 成立且组合风险允许时，
+价格不高于 X 对应所要求的前瞻回报与损失容忍度。
+```
 
-**The tax advantage of long-term holding (mechanism):**
-- During the holding period: not selling = not triggering capital gains tax; the tax dollars remain in the account and continue compounding
-- At the time of sale: only the gain is taxed, in a single event
-- Frequent switching: every switch triggers a tax payment, continuously shrinking the compounding base
+不能把历史高点跌幅、自己的成本价或上一轮估值当作自动买点。没有可靠估值时，允许只列待验证条件。
 
-**The tax logic of not paying dividends:**
-Shareholders can choose when to sell shares and realize gains (paying tax on their own schedule), whereas dividends force a taxable event regardless of whether the shareholder needs the cash.
+## 6. 资本用途：没有永远最优的顺序
 
-> "For a taxpaying investor, the 'cash dividend' approach would be inferior to — and usually far inferior to — the 'sell a little stock' approach." — 2012 Buffett Letter to Shareholders
+**B｜比较原则。**2003 年股东大会讨论把不同资本用途相互比较，而不是先套一个抽象资本成本答案。[A-2003-PM](../SOURCES.md#a-2003-pm)
 
-**Buffett's attitude:** He "proudly pays substantial taxes" — because Berkshire's success depends on the institutional framework the United States provides. Strategic tax planning is fundamentally different from tax evasion.
+先留足经营、安全和合同要求的资金，再比较可自由配置资本的去向。
 
----
+| 用途 | 核心问题 |
+|---|---|
+| 内部再投资 | 新增资本能取得什么经济回报，持续多久？ |
+| 收购控制权 | 实付总成本、整合和经营责任是否值得？ |
+| 买入上市证券 | 是否具备理解与配置能力，价格是否合适？ |
+| 回购自身股份 | 是否低于保守价值，资金是否充足，有无更好用途？ |
+| 偿还债务 | 节省多少税后成本，降低多少再融资与毁灭风险？ |
+| 分红 | 股东拿回资本是否比继续留存更有价值？ |
+| 持有现金/短期流动性 | 提供哪些生存与选择价值，代价是什么？ |
 
-## Special Investment Instruments
+不是每家公司都适合像伯克希尔那样买其他公司的股票。经营管理能力不自动等于证券投资能力。
 
-### Arbitrage / Workouts
+现金过多需要解释，但不是催促管理层做交易的理由。增长放缓也不必然意味着必须收购；可以输出现金、合理回购或返还股东。
 
-One of three investment pillars during Buffett's partnership era, dedicated to profiting from **publicly announced corporate events** (mergers, reorganizations, liquidations).
+## 7. 回购：价格相对价值，而非价格上涨或下跌
 
-**The fundamental difference from ordinary investing:**
-- Ordinary investing: returns depend on market sentiment and long-term business value
-- Arbitrage: returns depend on whether a specific event occurs, independent of overall market moves
+**B｜两个前提。**2011 年股东信把满足经营及流动性需要、股价低于保守内在价值作为回购的重要条件。[B-2011](../SOURCES.md#b-2011)
 
-**Four questions for evaluating an arbitrage opportunity (Buffett's framework):**
-1. What is the probability that the event occurs as announced?
-2. How long will the capital be tied up?
-3. Is there a possibility of a better outcome (e.g., the deal price being raised)?
-4. How severe are the consequences if the event fails?
+**P｜评估流程。**先看实际执行价格与当时合理的价值估计，再看回购后流动性、债务及替代用途，最后看净股数和每股经济权益。授权金额不是已执行金额，EPS 增长不自动等于创造价值。
 
-**Execution principles:**
-- Only engage in arbitrage based on public announcements; never rely on inside information
-- Concentrate in a small number of large transactions rather than spreading across 50 small ones
-- Use as an efficient substitute for idle cash
+| 情形 | 不能直接得出的结论 | 应补查 |
+|---|---|---|
+| 股价跌后回购增加 | 回购一定正确 | 价值是否下降得更多，融资风险是否上升 |
+| 股价上涨仍回购 | 回购一定错误 | 价值是否增长更快，仍是否低估 |
+| 低迷时回购不多 | 管理层一定失职 | 资金承诺、资本需求、可得信息与更好用途 |
+| 回购用于抵消激励稀释 | 对股东没有成本 | 激励经济费用、净股数与真实回购价格 |
 
-**Historical performance:** 63 years of practice, unleveraged annual returns exceeding 20%, well above the market.
+### 简化数学例子（P）
 
-### Bonds
+假设总股权内在价值为 100，已含足够的剩余现金，普通股共 10 股；不考虑税费和其他经营变化。
 
-**Buffett's basic stance on bonds:** Over the long run, bonds are inferior to equities. But they are an important tool in specific situations.
+- 用 8 回购 1 股：剩余价值 92、股数 9，每股约 **10.22**，高于原来的 10。
+- 用 12 回购 1 股：剩余价值 88、股数 9，每股约 **9.78**，低于原来的 10。
 
-**Core principles:**
+这个例子仅说明价格与价值的数学关系。现实中还要比较那笔现金本来可以怎样使用，以及回购是否影响企业韧性。
 
-1. **Understand the inverse relationship between interest rates and prices**
-   The longer a bond's duration, the more sensitive its price is to changes in interest rates. A 20-year bond's price swings far more than a 2-year bond's.
+不能把当前股价低于账面价值或某个历史市净率，当成所有企业适用的回购触发器。伯克希尔历史上的具体回购政策须按日期引用，不固化为现行规则。
 
-2. **Inflation is the silent killer of bonds**
-   > "The purchasing power of bond coupons is quietly eroded by inflation."
-   Long-term bondholders are bearing a substantial risk they may not have fully appreciated.
+## 8. 分红、留存、账面价值与税费
 
-3. **Contrarian opportunities during crises**
-   In 2002, Buffett purchased approximately $8 billion of junk bonds; during the 2008 crisis, he made large investments in Goldman Sachs and General Electric convertible preferred shares — fixed-income investments during periods of panic can offer extremely high risk-adjusted returns.
+### 8.1 留存一美元是否值得
 
-4. **Beware of unfair callable provisions**
-   Bonds where the issuer retains the right to call early are disadvantageous to holders — they get called away during good times and are stuck during bad times.
+**B｜原则。**1984 年信的留存利润讨论，要求留存有合理机会创造相应股东价值。[B-1984](../SOURCES.md#b-1984)
 
-### Convertible Securities
+**P｜应用。**先分清维持业务必须投入的资金和真正可自由配置的资金。评估留存资本时，需要看新增回报、时间和风险，而不是只看账面权益或收入增长。
 
-A hybrid instrument combining fixed-income downside protection with equity upside participation, frequently used by Buffett as an investment structure during crises.
+分红不是失败，回购也不是天然优于分红。股份贵、流动性有限、股东税制不同或更好的项目存在时，排序可能不同。
 
-**Buffett's principles for using convertibles:**
-- First, the security must be attractive purely as a fixed-income instrument (downside protection)
-- On top of that, the equity conversion right is an additional bonus
-- Only transact with management that is trusted and understood
+### 8.2 账面价值的适用性
 
-**Notable examples:**
-- 1987–1991: Invested nearly $2 billion in five large convertible preferred stock positions (Gillette, Coca-Cola, US Air, etc.)
-- 2008 financial crisis: Deployed $14.5 billion into Goldman Sachs and General Electric (preferred stock + warrants)
+**B｜历史变化。**2018 年股东信说明伯克希尔的业务组合、经营资产账面计量和回购，使每股账面价值变化越来越不能充分解释经济进展。[B-2018](../SOURCES.md#b-2018)
 
-**An important moment of self-reflection:**
-> "I could have bought 60 million shares of Gillette common... but I thought I was being so clever."
-Choosing convertible preferred over common stock ultimately left a great deal of money on the table. The lesson: do not let a "cleverer structure" cause you to miss an obviously superior opportunity.
+**P｜应用。**不能因此得出账面价值对银行、保险、清算或资产密集企业毫无意义。应明确它记录了什么、遗漏什么，以及资产能够赚取或收回多少现金。
+
+保险浮存金和递延税款是负债，即使有融资优势，也不能简单抹掉；资产与其对应请求权需要一并估值。
+
+### 8.3 税务递延的数学与适用边界
+
+**历史校正。**1989 年信的极端示例假设本金 1 每年翻倍，持续二十年，税率 34%。不是二十倍增长，而是税前 `2^20 = 1,048,576` 倍。[B-1989](../SOURCES.md#b-1989)
+
+按该假设自行复算：
+
+```text
+期末一次实现收益：1 + (2^20 - 1) × (1 - 34%) ≈ 692,060.50
+每年实现收益并缴税：[1 + 1 × (1 - 34%)]^20 ≈ 25,244.21
+```
+
+上述为按假设精确计算后四舍五入到两位小数；原信使用约数。
+
+这只是税款支付时点的数学演示，不是可实现收益预测或用户适用税率。实际分析要核对税务身份、证券与账户类型、管辖区及当期规则。时区、国籍或券商所在地不能独立确定税务居民身份。
+
+递延税务利益不能成为永久持有恶化资产的理由。换仓应比较税费后可部署资金与未来回报；税务未知时给明确的敏感性分析，不擅自填零或套用美国历史税率。
+
+## 9. 实际机会成本与 Longbridge 工作流（项目规范 P）
+
+### 9.1 触发范围
+
+当用户讨论机会成本、有没有更好的持仓替代、是否卖出换仓、某笔资金应分配给哪项资产时，先读取当前 Longbridge 持仓。纯方法论、文档编辑或不涉及实际配置的企业研究，不必读取账户。
+
+### 9.2 读取与完整性
+
+通过实际可用工具发现账户、持仓、余额及必要行情的读取能力。记录数据时点、账户覆盖、币种、现金、融资负债以及能取得的持仓权重。若持有衍生品，市值权重不能独立代表风险暴露。
+
+只采集解决问题所需信息，避免展示不必要的账户标识。长期 skill 不保存实时账户快照；每次相关任务重新读取，或明确用户指定快照的日期。
+
+不能把“查到某个账户”描述为掌握用户全部资产。工具失败、账户不全或价格陈旧时说明限制；不要猜测持仓或余额。读取失败时可继续独立研究，但结论必须标为未完成账户机会成本比较。
+
+### 9.3 候选与同口径比较
+
+优先从已有持仓中挑选可追加、能够评估且与本次配置相关的候选，再按需要加入新标的、现金或其他参照。实际持有不等于优质，也不等于仍然值得加仓。
+
+| 比较维度 | 当前标的 | 已有持仓候选 | 其他可执行用途 |
+|---|---|---|---|
+| 数据日期、价格、币种 | 实时核实 | 实时核实 | 实时核实 |
+| 未来现金流与必要投入 | 同一经济口径 | 同一经济口径 | 说明可比与不可比处 |
+| 回报范围和关键假设 | 不只列中值 | 不只列中值 | 不以广告收益替代估计 |
+| 永久损失及流动性 | 具体机制 | 具体机制 | 具体机制 |
+| 理解与证据质量 | 已知/未知 | 已知/未知 | 已知/未知 |
+| 组合边际影响 | 集中、相关性、融资 | 集中、相关性、融资 | 流动性和风险容量 |
+| 税费、汇兑与执行成本 | 当前可部署资金 | 真实买入成本 | 真实可得条件 |
+
+如果两项投资的估值误差明显大于模型显示的回报差异，应说明无法稳健排序，不为了完成表格选出“冠军”。
+
+### 9.4 换仓要同时证明两件事
+
+第一，原资产以今天的价格和信息是否仍有适当回报；第二，替代资产在扣除切换成本、计入风险及组合影响后是否确实更好。不能只因新资产表面更便宜，就宣称必须卖掉旧资产。
+
+还应比较“用新增现金买入”“部分调整”“保留等待”与“全部换仓”。这些是选项，不意味着每次必须提出四项建议。不要预设已经持有就应继续，也不要把卖出时的税费与长期劣质持有混为一谈。
+
+### 9.5 输出与权限
+
+给出账户读取状态、实际比较对象、最重要的差异、行动条件及仍缺失的信息。明确建议不等于执行，不发送订单、不改变账户设置。交易需要独立明确授权。
+
+## 10. 特殊机会：另选框架，不强套优质复利股模板
+
+### 10.1 套利与事件驱动
+
+**B｜历史依据。**1988 年信讨论事件发生概率、资金占用时间、更好结果与失败后果，并警告套利并不保证利润。[B-1988](../SOURCES.md#b-1988)
+
+**P｜执行。**以公开交易条款为基础，研究融资、审批、股东投票、终止条款、对价形式和期限；法律与监管条件需要最新原始文件，不靠固定胜率。
+
+```text
+在简化的同一结算时点假设下：
+预期终值 = p × 成功净回收 + (1-p) × 失败净回收
+```
+
+真实现金流时间不同，应逐路径折现或计算回报，不以简单价差乘年化系数掩盖延期与失败损失。并购套利不是现金等价物，也不独立于市场、融资和流动性风险。
+
+不规定必须集中若干大交易。组合中的事件相关性与尾部损失可能比平均价差更重要。
+
+### 10.2 债券与信用投资
+
+研究现金流合同、偿付顺位、信用损失、期限、币种、通胀、可赎回条款、抵押与契约。收益率高不能弥补无法分析的偿付风险。
+
+不能说长期债券永远不如股票。资产是否合适取决于价格、收益与义务匹配；可赎回条款不利的部分也可能由价格或票息补偿，应整体评价。
+
+### 10.3 优先股、可转债与认股权证
+
+区分债权、优先分配权、转换权和独立认股权证。优先股加认股权证不等于可转换优先股；契约顺位和兑付能力不等于本金保证。
+
+先拆出下行现金回收、发行人持续经营、赎回/延期/停息条件、转换或认购价值，再比较普通股或其他可得证券。复杂结构不是优越性的证据，也不能因少了上涨空间却自认为更安全。
+
+**历史纠正。**2008 年股东信的 145 亿美元固定收益投资涉及 Wrigley、高盛和通用电气三家，并有权益参与安排，不能写成只向高盛和通用电气投入该金额。[B-2008](../SOURCES.md#b-2008)
+
+删除旧版未经可靠核实的五笔可转优先股名单，以及把所有危机融资统一描述为同一种证券的说法。
+
+## 11. 估值提交前的最终检查（P）
+
+```text
+[ ] 估值对象、币种、日期、税费和现金流归属明确。
+[ ] 价格、财务数据和需要最新核验的信息有来源。
+[ ] 维持与增长投入已配对，利润到现金可以复核。
+[ ] 股权薪酬、净股数、负债和非经营资产没有遗漏或双算。
+[ ] 折现率与回报要求已区分，未冒称巴菲特统一公式。
+[ ] 终值和不利情景具有经济依据，不是反推目标价。
+[ ] 价格折扣与潜在上涨空间未混淆。
+[ ] 涉及机会成本时，已有持仓已读取或明确读取失败。
+[ ] 行动条件、失效证据和结论的不确定性清楚。
+```

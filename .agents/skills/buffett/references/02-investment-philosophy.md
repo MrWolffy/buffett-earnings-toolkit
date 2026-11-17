@@ -1,268 +1,120 @@
-# Core Investment Philosophy
+# 02｜投资哲学与策略边界
 
-> When to read this file: When you need to understand Buffett's most fundamental investment beliefs, assess "intrinsic value," judge market efficiency, or address the question of concentration vs. diversification.
+> **版本：2.0｜修订日期：2026-10-22**  
+> 适用：企业所有权、内在价值、复利、集中与分散、市场效率、策略差异。  
+> 来源标记遵循 [SOURCES.md](../SOURCES.md)。未特别标注的分析规则为 P，不是巴菲特逐字表述。
 
-## Focus Investing
+## 1. 先确定自己买到的是什么
 
-**Core: Concentrate large amounts of capital in a small number of businesses you truly understand, rather than spreading it across dozens or hundreds.**
+**B｜所有权原则。**《股东手册》将股东视为企业资产的间接所有者，关注长期经营进展而非持续交易报价。[B-OM](../SOURCES.md#b-om)
 
-Buffett believes that broad diversification is protection against ignorance. If you truly understand the businesses you invest in, diversification only reduces returns.
+**P｜应用。**分析应穿透证券名称，确认现金流请求权：普通股是剩余权益，债券和优先股的顺位与条款不同，控股权带来经营责任与承诺。优秀企业不保证它发行的任何证券、在任何价格下都值得买。
 
-> "We simply try to find outstanding businesses at sensible prices — not sensible businesses at outstanding prices. I cannot find a hundred businesses that meet my investment criteria. But concentrating in a handful of attractive opportunities, I feel quite comfortable." — 1976 Buffett Letter to Shareholders
+必须分别回答：
 
-**The root cause of concentration is a high standard of stock selection criteria, not a deliberate strategy:**
+- **企业问题：**它是否创造经济价值，价值归属于谁？
+- **证券问题：**这项权利以什么条款、顺位和价格出售？
+- **投资者问题：**持有它是否适合当前资金期限、风险承受能力与替代机会？
 
-Buffett's four stock selection criteria (1976):
-1. Favorable long-term economic characteristics
-2. Competent and honest management
-3. A purchase price attractive by private-ownership standards
-4. An industry within one's circle of competence
+不得把三者压缩为一个“好公司”标签。
 
-**Opportunities that simultaneously satisfy all four criteria are extremely rare — that is the fundamental reason for concentration.**
+## 2. 内在价值是现金的现值，不是账面标签
 
-**How focus investing reduces risk (a contrarian view):**
+**B｜定义基础。**1992 年股东信以未来现金流入、流出及适当折现作为资产价值的共同基础，并明确增长对价值的作用可能为正或为负。[B-1992](../SOURCES.md#b-1992)
 
-> "We believe that a policy of portfolio concentration may well decrease risk if it raises, as it should, both the intensity with which an investor thinks about a business and the comfort level he must feel with its economic characteristics before buying into it." — 1993 Buffett Letter to Shareholders
+**P｜应用边界。**估值需要把维持竞争力的投入、实现增长的投入、债权人与其他权益的要求、稀释以及非经营资产处理清楚。不同模型是对同一经济问题的近似，不是三种互相投票的“真实价值”。
 
-Here Buffett redefines risk: not as stock price volatility (the academic beta coefficient), but as the probability of permanent capital loss. Holding five or six deeply understood stocks carries less risk than holding a hundred stocks you barely know.
+价值会随现金流预期、利率、资本配置和权利结构而变化。股价下跌不证明价值下降，也不证明价值未变。账面净资产、市盈率、历史最高价和收购价都只能提供信息，不能自动定义价值。
 
-**Rebuttal of beta theory:**
+不能因为模型产生一个数字，就认为这个数字已经被独立证明。结论的可靠程度受限于最重要的假设，而不是计算器的精度。
 
-> "Under this beta-based theory, a stock that has dropped sharply compared to the market — as had Washington Post when we bought it in 1973 — becomes 'riskier' at the lower price than it was at the higher price. Would that description have then made any sense to someone who was offered the entire company at a vastly-reduced price?" — 1993 Buffett Letter to Shareholders
+## 3. 价格纪律与质量偏好必须同时存在
 
-**Concentration vs. diversification — it depends on the investor:**
+**B｜历史依据。**1977 年股东信列出可理解、长期前景有利、管理层诚实能干、价格有吸引力的股票选择条件；1989 年信说明了偏向优秀企业而不是单纯廉价企业的思想转变。[B-1977](../SOURCES.md#b-1977)、[B-1989](../SOURCES.md#b-1989)
 
-> "When 'dumb money' acknowledges its limitations, it ceases to be dumb." — 1993 Buffett Letter to Shareholders
+**P｜判断。**好企业可以被买得太贵；普通企业也可能在能够合理估计的现金收回条件下成为好投资。后者通常需要不同的估值方法、持有期限和退出逻辑，不能按长期复利股的假设硬套终值。
 
-Buffett clearly distinguishes between two types of investors:
-- **Investors capable of deep business research**: concentrate in a small number of excellent businesses
-- **Ordinary investors lacking analytical ability**: broad diversification (index funds) is the best choice
+“合理价格”不是无限提高倍数的许可证，“安全边际”也不是所有企业必须打同一个折扣。需要说明价格如何容纳预测误差，以及不利情境下有哪些真正可收回的经济价值。
 
-**Proving conviction through action:**
+### 企业类型与关键任务（P）
 
-> "More than 99% of my net worth is in Berkshire, and I'm quite comfortable continuing to hold it — as I would be having my wife or foundation do the same." — 2003 Buffett Letter to Shareholders
+| 类型 | 主要价值来源 | 需要防止的误判 |
+|---|---|---|
+| 高回报、再投资空间充足 | 有价值的内部再投资与持续现金产出 | 把当前回报率无期限外推 |
+| 高回报、内部增长有限 | 可分配现金及外部资本配置 | 因低增长直接否决，或逼迫低回报扩张 |
+| 资本密集、回报适当 | 受约束但可持续的现金回收 | 忽略必要投入，或一律视为坏生意 |
+| 周期/资源业务 | 周期内现金、成本位置与资产寿命 | 用顶峰利润乘上正常倍数 |
+| 衰退或清算业务 | 有限寿命现金、可实现净资产 | 高估残值、低估退出成本、误用永续增长 |
+| 事件驱动证券 | 特定事件的完成价值 | 把交易价差当成无风险收益 |
 
-**Mocking over-diversification:**
+这不是巴菲特本人提出的分类，是为了避免同一筛选器排除所有非消费品牌投资。
 
-> "If you have a harem of forty women, you never get to know any of them very well." — 1984 Buffett Letter to Shareholders (quoting Billy Rose)
+## 4. 复利来自有价值的再投资，不来自不分红这一形式
 
-> "I am not an advocate of Noahic diversification." — 1963 Buffett Letter to Partners
+**B｜资本必须有去处。**1984 年信以留存一美元是否有望创造至少一美元的股东价值，讨论利润应否留存。[B-1984](../SOURCES.md#b-1984)
 
-**Practical examples:**
-- Partnership era: typically held heavy positions in five or six undervalued stocks (each 5%–10% of total assets); control-type investments were even more concentrated in a single enterprise
-- Berkshire era: in 1976, Washington Post, GEICO, and Kaiser Industries made up the bulk of the portfolio
-- Recent: Apple at one point comprised nearly 50% of Berkshire's equity portfolio
+**P｜区分两层复利。**企业内部再投资与投资者收到分红后再投资，都是资本继续工作。前者不一定更优；应比较回报、风险、税费与可执行用途。低回报企业不断留存利润，可能只是规模扩大而非每股价值增加。
 
-**Common misconceptions:**
-- Concentration is not gambling — concentration is a rational decision after deep research; gambling is a blind bet made with insufficient information
-- Focus investing has prerequisites: truly understanding the business + sufficient financial strength to withstand volatility + psychological resilience
+复利还取决于避免重大永久损失、不过度支付价格、控制摩擦，以及不在最不利时刻被迫出售。数学上的复利不保证经济上的高回报能一直延续。
 
----
+示例仅为数学演示：本金按每年 10% 增长，十年为 `1.1^10 ≈ 2.59` 倍，三十年为 `1.1^30 ≈ 17.45` 倍。它不代表任何证券的预测，也不能忽略中途资金流与税费。
 
-## Efficient Market Theory
+**历史纠正。**据 2024 年度信回顾，伯克希尔在 1965—2024 年间支付过一次现金股息：1967 年 1 月 3 日，每股 A 股 0.10 美元。不能写成“从未分红”。这项历史事实并不预设未来分红政策。[B-2024](../SOURCES.md#b-2024)
 
-**Core: Buffett is the most famous long-term critic of the Efficient Market Hypothesis (EMH) — not in words, but proven false by 60 years of excess returns.**
+## 5. 集中与分散取决于能力和后果，不是忠诚信条
 
-The Efficient Market Hypothesis (EMH) was systematized by Eugene Fama in the 1960s. Its central claim: stock prices already fully reflect all publicly available information, so no one can consistently achieve excess returns.
+**B｜有条件的集中。**1993 年股东信讨论集中持仓可能促进更深入的商业判断，也区分有研究能力的投资者与适合广泛分散的投资者。[B-1993](../SOURCES.md#b-1993)
 
-**Buffett's critical distinction — the vast difference between "often" and "always":**
+**P｜项目结论。**集中可能放大正确判断，也会放大未知、相关性和单点失败。不能声称“只要理解，分散必然降低收益”，更不能把仓位集中当作研究深度的证明。
 
-> "Observing correctly that the market was frequently efficient, they went on to conclude incorrectly that it was always efficient. The difference between these propositions is night and day." — 1988 Buffett Letter to Shareholders
+在提出仓位意见前，检查：
 
-Buffett never denies that markets are reasonably efficient "most of the time" — what he opposes is the extreme claim that they are "always" efficient.
+| 检查项 | 需要回答的问题 |
+|---|---|
+| 判断误差 | 一个核心假设错误会损失多少，而非只看正常波动？ |
+| 共同风险 | 不同股票是否共同依赖某类客户、技术、融资或监管环境？ |
+| 外部资产与现金需求 | 已知账户是否仅占用户财富一部分？未知部分不能假设为零 |
+| 持有条件 | 市场关闭、下跌或资金需求出现时是否被迫出售？ |
+| 替代机会 | 新增仓位是否显著优于分散或保留流动性？ |
 
-**63 years of excess returns as empirical rebuttal:**
+《股东手册》中对集中持有伯克希尔的说明，同时包含底层业务多样性的背景；这不能直接证明个人集中几只普通股同样安全。[B-OM](../SOURCES.md#b-om)
 
-Graham-Newman Corporation (1926–1956) achieved an unleveraged average annual arbitrage return of 20%; subsequently Buffett continued the same principles at his partnership and Berkshire for 63 consecutive years of outperformance (the market averaged roughly 10% annually over the same period):
+本项目不规定“最佳持股数量”或统一仓位比例。没有足够的个人与组合数据时，只讨论原则或条件，不假装给出已个性化的配置。
 
-> "A group that follows this approach, investing $1,000 with all earnings reinvested, would grow that sum to $400,000 at a 10% annual return or $97,000,000 at a 20% annual return. In our view, this is a statistically significant difference that belies a bit of name-calling." — 1988 Buffett Letter to Shareholders
+## 6. 市场并非永远正确，也不是永远错误
 
-**The Superinvestors of Graham-and-Doddsville:**
+**B｜历史观点。**1988 年股东信区分市场经常有效与始终有效，并以投资实践讨论错误定价。[B-1988](../SOURCES.md#b-1988)
 
-In 1984 Buffett delivered his lecture at Columbia Business School, "The Superinvestors of Graham-and-Doddsville," specifically to rebut the claim that long-term excess returns are merely luck: if the winners were randomly distributed across the entire country, you could call it luck; but if the winners are disproportionately concentrated in the same "intellectual village" — followers of the Graham-and-Dodd school — then it is no coincidence.
+**P｜应用。**不需要裁定所有形式的有效市场理论，才能研究一个具体机会。要证明的是当前某项资产的价格隐含假设与可靠证据不一致，而不是用巴菲特的声誉证明自己必然有超额收益。
 
-**Academia's ostrich mentality:**
+不要捏造“市场 99% 时间有效”等精确比例。长期业绩比较须说明期间、含息与否、税前税后、杠杆、费用以及账面价值或市值口径；不能把长期累计领先改写为每年都领先。
 
-> "Professors teaching EMH continued to do so with enthusiasm — and, doubtless, sincerity — after most of this flagging had occurred, and they will probably still be doing so after the next crash. A professor who spoke against EMH had roughly the same chance of advancement as Galileo did for becoming Pope." — 2006 Buffett Letter to Shareholders
+**历史纠正。**1988 年信中的 63 年套利经验涉及 Graham-Newman、Buffett Partnership 和 Berkshire 三个组织的连续记录，不是巴菲特个人 63 年记录，更不是保证每年跑赢或未来获得 20% 回报。[B-1988](../SOURCES.md#b-1988)
 
-> "I suppose the Flat Earth Society would consider circumnavigation an annoying, but explicable, anomaly." — 2010 Buffett Letter to Shareholders
+## 7. 不依赖宏观择时，不等于忽略宏观传导
 
-**The spread of EMH actually helps value investors:**
+把“不知道下一季度市场方向”与“不需要研究利率、通胀、信用或监管”区分开。前者不能成为忽略后者的理由。
 
-> "Thousands of students were sent out into life believing that on every day the price of every stock was 'right'... If you are in the shipping business, it's very helpful to have all of your potential competitors be taught that the earth is flat." — 2006 Buffett Letter to Shareholders
+本项目不把买卖结论建立在未经验证的短期大盘预测上，但要求研究宏观变化通过哪些渠道影响具体企业：售价、成本、再投资、融资、抵押品、索赔或客户预算。用条件式压力测试，而不是先预测大盘再替企业安排结论。
 
-Buffett even half-jokingly suggested that the Graham school "should endow several professorships to make sure that EMT is forever taught on campuses."
+现金可以满足流动性、等待和避免被迫卖出的需要；也有购买力与机会成本。它不是永远正确的默认答案，也不是必须尽快消灭的闲置资产。
 
-**Practical implications:**
-- Markets may be efficiently priced 99% of the time, but that 1% of mispricing is the source of opportunity
-- Efficient markets gave rise to index funds — which is actually a good outcome for ordinary investors
-- Efficient markets do not mean markets are predictable; opposing EMH does not mean opposing index funds
+## 8. 长期持有是策略结果，不是退出禁令
 
----
+**B｜不同所有权情境。**1987 年信讨论出售上市证券的价格与替代机会考量；《股东手册》对控股企业另有承诺与经营关系的考虑。[B-1987](../SOURCES.md#b-1987)、[B-OM](../SOURCES.md#b-om)
 
-## Market Forecasting
+**P｜应用。**上市少数股权、控股子公司和有到期事件的证券，不应共用“永远持有”规则。持有理由可以是持续现金产出、有吸引力的前瞻回报、切换成本或暂无更优用途；不能只是“以前决定长期”。
 
-**Core: Buffett never predicts the market, viewing it as a futile and harmful activity.**
+判断变弱、回报下降、风险或组合约束变化都值得复核。没有完全毁坏的护城河，不代表原持有逻辑一定成立。详细卖出判断见 [07-risk-behavior.md](07-risk-behavior.md)。
 
-> "I do not forecast market movements or economic fluctuations. If you think I can predict these things, or that it's necessary to forecast them in order to invest, then the partnership is not for you." — 1962 Buffett Letter to Partners
+## 9. 伯克希尔经验不能机械移植
 
-This position has been maintained from 1962 to the present, through every major turning point in his investment career — the 1987 crash, the 2000 dot-com bubble, the 2008 financial crisis, the 2020 COVID collapse — his stance has been unwavering: no forecasting, only valuation.
+资金规模、永久资本、保险负债结构、控股经营、税务与声誉承诺会改变机会集合。巴菲特对规模限制的讨论，应理解为可部署机会受约束，而不是“资本变大就数学必然无法复利”。[B-1991](../SOURCES.md#b-1991)
 
-**Why not forecast:**
+个人账户不必复制伯克希尔的行业构成或买入规模，也不能复制其历史交易条款。对于任何案例，先问哪些条件在当前任务中仍然成立。
 
-> "We have no idea what the market will do in the short term or the medium term — we never have." — 1986 Buffett Letter to Shareholders
+## 10. 哲学落地检查（P）
 
-> "Charlie and I have not learned how to solve difficult business problems. What we have learned is to avoid them... making macro or market bets based on your own views or listening to someone else's macro or market predictions is a waste of time. In fact it is dangerous, because it may blur your vision of the facts that are truly important." — 2013 Buffett Letter to Shareholders
+分析结束前确认：是否区分了企业、证券与投资者；是否将增长与投入配对；是否让价格参与判断；是否接受优质现金输出型低增长企业；是否把集中与长期持有写成了无条件信仰；是否对自身可执行的替代机会作了比较。
 
-**The core fraud of the market-forecasting industry — survivorship bias:**
-
-> "If 1,000 managers make a market prediction at the start of the year, it's likely that the calls of at least one will be correct for nine consecutive years. Of course, 1,000 monkeys would be just as likely to produce a seemingly all-wise prophet. But then, a difference would arise: the lucky monkey would not find people rushing to give it money to manage." — 2016 Buffett Letter to Shareholders
-
-**The cost of forecasters:**
-
-> "Forecasters of market direction fill your ears but never fill your wallet." — 2014 Buffett Letter to Shareholders
-
-**Value assessment vs. trend prediction — Buffett does the former, not the latter:**
-
-Although Buffett does not predict market movements, he will make a valuation judgment about the overall market at times of extreme valuation:
-
-> "Though we never try to predict stock market movements, we do assess, in a very rough way, whether the stock market is fairly valued." — 1997 Buffett Letter to Shareholders
-
-The key distinction: he can judge whether the market is broadly overpriced or underpriced, but will not predict when it will rise or fall. In 1999 he warned that the market was overvalued, but did not say "it will fall immediately" — the market rose for another year before peaking.
-
-**Practical implications:**
-- Make buy and sell decisions based on business intrinsic value, not guesses about market direction
-- Do not attempt market timing; ordinary investors should invest regularly in fixed amounts
-- The ability to remain calm during panic comes from focusing on value rather than price
-- Recommends buying stocks only if you intend to hold for at least five years (2014 Letter to Shareholders)
-
----
-
-## Undervalued & Margin of Safety
-
-**Core: Only buy when the price is significantly below intrinsic value — that gap is the "margin of safety," a concept from Graham that Buffett has followed throughout his career.**
-
-> "I never attempt to make money on the stock market. I buy on the assumption that they could close the market the next day and not reopen it for five years." — 1958 Buffett Letter to Partners
-
-**The true meaning of undervaluation:**
-
-"Cheap" does not equal "undervalued." Undervaluation must be built on an independent estimate of intrinsic value:
-- A low P/E ratio does not mean undervalued (earnings power may be deteriorating)
-- A 90% stock price drop does not mean undervalued (if intrinsic value has dropped 95%)
-- True undervaluation: after deep analysis, confirming that the market price is significantly below the business's intrinsic value
-
-**The longer undervaluation persists, the more it benefits long-term investors:**
-
-> "We don't worry about the fact that the market may not quickly revalue upward the securities that we believe to be undervalued. In fact, we prefer this to not be the case, since in most years we expect to have net inflows of funds for investment in securities. The continued ability to buy at attractive prices is likely, in the end, to prove more beneficial to us than would be an opportunity for short-term gain through a quick market revaluation to levels at which we would not wish to add." — 1978 Buffett Letter to Shareholders
-
-**Undervalued stocks will continue to fall — but intrinsic value remains unchanged:**
-
-> "When trouble comes, even undervalued securities will be hit — though less so than overvalued ones. Their intrinsic value, however, will not be diminished." — 1958 Buffett Letter to Partners
-
-Undervaluation provides long-term protection, not short-term support.
-
-**Evolution from "cigar butts" to "quality businesses":**
-
-Buffett's early undervaluation investing was influenced by Graham, primarily seeking "cigar butt" stocks priced below liquidation value — stocks so cheaply priced they had one more puff left in them, with a single transaction capturing the final value.
-
-This approach has a fundamental limitation: **the companies are of such poor quality that after buying in, you often get trapped in a "you paid for a problem" situation.**
-
-Influenced by Charlie Munger, Buffett gradually shifted:
-
-> "It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price." — Buffett's core transformation under Munger's influence (marked by the 1972 See's Candies acquisition)
-
-**Comparison of the two models:**
-
-| Dimension | Cigar Butt (early Graham style) | Quality Business (mature Buffett style) |
-|-----------|----------------------------------|------------------------------------------|
-| Basis for purchase | Price below liquidation value | Price below intrinsic business value |
-| Business quality | Irrelevant — cheap enough is sufficient | Moat and management are central |
-| Holding period | Sell after value recovery | Prefer to hold permanently |
-| Scale limitations | Small-cap; limited by fund size | Large-cap quality businesses; can absorb large capital |
-| Typical examples | Dempster, Sanborn Map | Coca-Cola, American Express |
-
-**Extended applications of the undervaluation concept:**
-- **Buybacks**: when stock price is below intrinsic value, repurchase is the optimal capital allocation — buying more than a dollar of value for a dollar spent
-- **Bonds**: WPPSS municipal bonds (1984) — a case of Buffett applying the undervaluation concept to non-equity assets
-- **Overall market**: the market was severely undervalued overall in 1973–1974, and severely overvalued overall in 1999
-
-> "You pay a low price, you get high value. Each undervaluation investment is worth much more than its price, carrying a substantial margin of safety. Each individual holding has a margin of safety, and holding a diversified group forms a portfolio that is both safe and has upside potential." — 1961 Buffett Letter to Partners
-
----
-
-## Compounding
-
-**Core: Continuously reinvesting returns so that money generates more money, producing exponential growth over time.**
-
-Einstein is said to have called it "the eighth wonder of the world." Buffett's entire Berkshire business model is built on this principle — for sixty years, virtually no dividends paid, all profits retained and reinvested.
-
-> "Reinvestment of earnings plus the power of compounding has produced a remarkable result, and shareholders have grown rich." — 2021 Buffett Letter to Shareholders
-
-**The three necessary conditions for compounding:**
-
-> "And so we began our journey to 2023 — a bumpy road involving a combination of retained earnings by our shareholders (i.e., reinvestment of profits), the power of compounding, the avoidance of major mistakes — and, most importantly, the American tailwind." — 2022 Buffett Letter to Shareholders
-
-1. **Continuous saving**: profits must be retained rather than consumed (Berkshire has paid only one dividend since 1967)
-2. **Avoiding major mistakes**: losing 50% requires earning 100% to recover — one catastrophic mistake can destroy years of compounding
-3. **A favorable external environment**: a society with sound rule of law and sustained economic growth
-
-**Scale is the enemy of compounding:**
-
-> "A fat wallet is the enemy of superior investment returns. Given our current size, such a return is virtually impossible. Those who disagree are suitable for sales but not for mathematics." — 1983 Buffett Letter to Shareholders
-
-As capital scale expands, maintaining a high compound growth rate becomes increasingly difficult. Berkshire's annualized compound growth rate has dropped from roughly 23% in the early years to roughly 19% in recent years — this is an iron law of mathematics, not a failure.
-
-**The numbers say it all:**
-- 1965–2022 (58 years): Berkshire per-share market value CAGR of 19.8% vs. S&P 500 (with dividends) at 9.9%
-- Seemingly only about 10 percentage points more, yet the cumulative result: **3,787,464%** vs. **24,708%**
-- Coca-Cola: in 1994, paid Berkshire $75 million in dividends → grew to $704 million by 2022 (cost basis roughly $1.3 billion, market value grown to $25 billion)
-
-**About Berkshire's one dividend:**
-Berkshire paid its only ever dividend in January 1967 — 10 cents per Class A share, totaling $101,755. Buffett recalled in his 2024 letter: "I can't remember why I ever proposed this action to Berkshire's board. It was a mistake."
-
-**The reverse of compounding — the "anti-compounding" effect:**
-- Losing 50% requires earning 100% to recover
-- This is why "never risk permanent capital loss" sits at the top of all investment principles
-- The first rule of compounding is: do not interrupt the compounding process
-
----
-
-## Intrinsic Value
-
-**Core: What a business is truly worth — not the accounting figure, not the market quote, but the discounted total of all the cash flows it can generate for shareholders over its entire lifetime.**
-
-> "Intrinsic value is an all-important concept that offers the only logical approach to evaluating the relative attractiveness of investments and businesses. Intrinsic value can be defined simply: it is the discounted value of the cash that can be taken out of a business during its remaining life. The calculation of intrinsic value, though, is not so simple. As our definition suggests, intrinsic value is an estimate rather than a precise figure, and it is additionally an estimate that must be changed if interest rates move or if forecasts of future cash flows are revised." — 1989 Buffett Letter to Shareholders
-
-**The essence of intrinsic value: forward-looking, not historical.**
-
-> "The value of any stock, bond, or business today is determined by the cash inflows and outflows — discounted at an appropriate interest rate — that can be expected to occur during the remaining life of the asset." — 1992 Buffett Letter to Shareholders
-
-The key distinction between stocks and bonds: a bond's future cash flows are defined by its coupon and maturity date; a stock's future "coupons" must be estimated by the investor themselves — this is why calculating intrinsic value requires business judgment, not merely mathematical ability.
-
-**Intrinsic value vs. book value:**
-
-> "Book value is an accounting concept, recording the accumulated financial inputs from both contributed capital and retained earnings. Intrinsic value is an economic concept, estimating future cash output discounted to present value. Book value tells you what has been put in; intrinsic value estimates what can be taken out. For most companies, these two figures bear no relationship to each other." — 1993 Buffett Letter to Shareholders
-
-- A manufacturer with large amounts of obsolete equipment: high book value, potentially very low intrinsic value
-- A light-asset brand business (like See's Candies): low book value, intrinsic value potentially far exceeding book
-- In 2018, Buffett formally abandoned book value as Berkshire's primary measuring metric
-
-**Growth does not necessarily increase intrinsic value:**
-
-> "Growth is always a component in the calculation of value, constituting a variable whose importance can range from negligible to enormous and whose impact can be negative as well as positive." — 1992 Buffett Letter to Shareholders
-
-When growth is meaningful: only when a business can reinvest at a **return above its cost of capital** does growth add value. The airline industry is the counterexample — the more it expands, the more it destroys shareholder value.
-
-**Intrinsic value is a range, not a precise number:**
-
-> "The calculation of intrinsic value, though all-important, is far from precise. As our definition suggests, intrinsic value is an estimate rather than a precise figure, and it is additionally an estimate that must be changed if interest rates move or if forecasts of future cash flows are revised. Two people looking at the same set of facts will almost inevitably come up with at least slightly different intrinsic value figures." — 2005 Buffett Letter to Shareholders
-
-What investors need is "roughly right" rather than "precisely wrong."
-
-**Practical applications of intrinsic value:**
-- **Buy**: when the market price is significantly below intrinsic value (margin of safety)
-- **Hold**: as long as intrinsic value is growing at a satisfactory rate
-- **Buyback**: when the stock price is below intrinsic value, repurchase is the optimal capital allocation
-- **Sell**: when the market price greatly exceeds intrinsic value and no better use of funds can be found
-
-> "In the short run, the market is a voting machine; but in the long run, it is a weighing machine." — quoting Benjamin Graham (2017 Buffett Letter to Shareholders)
+原则的价值是改善决定，而不是让每个决定听起来都像价值投资。

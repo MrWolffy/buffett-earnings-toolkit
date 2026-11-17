@@ -1,0 +1,35 @@
+{
+  "policy_version": "buffett-valuation-6",
+  "schema_version": "buffett-research-v2.5",
+  "task_scope": "standalone_screen",
+  "approved_rates": {},
+  "default_entry_policy_id": "parent-assumption-tolerance-2026-11-v3",
+  "approved_entry_policies": {
+    "parent-assumption-tolerance-2026-11-v3": {
+      "defined_by": "parent",
+      "price_method": "economic_assumption_tolerance",
+      "scenario_labels": [
+        "central",
+        "conservative",
+        "adverse",
+        "floor"
+      ],
+      "anchors": ["V_central", "V_conservative", "V_adverse", "V_floor"],
+      "shared_model_discount_rate": true,
+      "floor_unavailable_requires_reason": true,
+      "basis": "四经济锚由父层从经复核的不同经济假设中采用，统一币种、普通股口径和折现框架。central 为最有据正常经济，conservative 容纳多项普通误差。adverse 仅单一核心论点显著失败或最多两项直接因果相连假设失败，独立驱动维持保守假设，禁止无关诉讼/税务/融资/宏观/资本冲击叠加；父层退回灾难包，普通股仍须生存。floor 是当前可行企业的持续经营经济底部（GOING-CONCERN ECONOMIC FLOOR）：无增长价值、质量/倍数溢价、未证实新项目，低位但有证据支持的正常化经营，全计维持/SBC/税/营运资本/索偿，不自动摧毁现有客户、特许经营或资产。仅有据结构性衰退/有限寿命可用 run-off floor。清算/退出/回收另作风险参考，不是 V_floor；可行企业仅清算为零不足以推出零 floor，零值须低位持续经营普通股经济实际≤0或有限期优先索偿后无普通股回收。不得用利率、统一折扣或插值造锚。允许等值和有据零值，缺失须说明且禁止胖球。四锚五档等号归较低价格侧；经济档位与证据、生存上限分开，按最低档及逻辑破坏限制，不是交易授权。仅资本分配受限最高 add；具体普通股毁损尾部、融资或重大稀释失败最高 research（或逻辑破坏限制）；普通未知或 mixed 本身不使检查失败。全部胖球项通过才允许无约束 fat_pitch。"
+    }
+  },
+  "quality_rubrics": {},
+  "cross_check_review_fraction": 0.3,
+  "cross_check_threshold_basis": "Project review trigger, not a Buffett rule or valuation adjustment. cross_check_resolved allows material differences in economic state/right (e.g. liquidation vs viable going concern) when resolved by parent sources and rationale without changing V_floor. An unexplained lower same-premise independent estimate is unresolved and blocks fat_pitch. floor_independent separately needs same-premise going-concern or evidenced finite-life support; recovery-only evidence cannot satisfy it for a viable franchise.",
+  "minimum_quote_coverage": 0.9,
+  "quote_max_age_calendar_days": 7,
+  "automatic_research_trigger": "verified_new_earnings_only",
+  "bootstrap_lookback_days": 7,
+  "legacy_import_fields": [
+    "ticker"
+  ],
+  "migration_rule": "No numerical conversion or relabeling of historical boundaries. Preserve immutable historical reports, event completion and watermarks. Rebuild economic scenarios on verified new earnings or explicit manual invocation; contract upgrade alone never requeues historical events.",
+  "actionable": false
+}

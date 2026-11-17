@@ -1,505 +1,274 @@
-# Industry Analysis Playbooks
+# 08｜行业分析手册：机制、指标与失效条件
 
-> When to read this file: When analyzing companies in a specific industry, look up the corresponding evaluation framework, key metrics, historical cases, and macro sensitivities by industry.
+> **版本：2.0｜修订日期：2026-10-22**  
+> 适用：选择行业口径，解释经济收益与风险，不用于按标签自动选股。  
+> 本文件中的行业检查方法属于 **P｜项目扩展**；明确标出的历史原则按 [SOURCES.md](../SOURCES.md) 引用。
 
-Different industries operate on fundamentally different economic logic. Analyzing a bank the way you would analyze a consumer goods company, or analyzing a utility the way you would analyze a technology company, will lead to wrong conclusions.
+## 0. 使用方法与数据时效
 
----
+先确定企业的真实经济活动，再选章节；多业务企业应拆分。每个行业都要回答：谁付钱、竞争优势是什么、需要投入多少资本、股东能拿走什么、什么变化会使原判断失效。
 
-## Insurance
+下列指标是研究入口，不是优秀公司的统一阈值。监管比例、行业平均、市占率、公司人员及持仓信息都必须按具体时点重新查证。本文件不保留无日期的“当前规模”“最近持仓”或“行业永远如此”的结论。
 
-Buffett's most familiar and beloved industry, and the core engine of Berkshire. Acquired National Indemnity for $8.6 million in 1967; float has since grown from $19 million to over $164 billion (a more than 8,000-fold increase), and National Indemnity's net worth now stands at $111 billion — more than any other insurance company in the world.
+历史案例只说明某个判断机制，不替代今天对同一公司的分析。宏观敏感性用具体资产负债和合同验证，不设单向机械结论。
 
-### The Industry's Unique Logic
+## 1. 保险：分开看承保、浮存金、投资与资本
 
-**Insurance is a "collect now, pay later" business.** Between premium income and claims payouts, insurers hold large amounts of freely investable "float."
+### 1.1 先区分产品
 
-An excellent insurance company = access to **free or even negative-cost** capital for long-term investment.
+财产险、寿险、再保险、年金和长期护理等负债的期限、赔付、退保、保证收益及监管条件不同。不能把某类财产险经验推广到所有保险公司。
 
-The industry's average ROE is only 8.5%, far below the Fortune 500 average of 14%. The reason is that most insurers write business at a loss in pursuit of market share. Berkshire's principle is exactly the opposite: walk away from business rather than write at a loss.
+**B｜经济基础。**1997 年股东信把浮存金解释为暂时持有但不拥有的资金，并将其成本与其他融资成本比较。[B-1997](../SOURCES.md#b-1997)
 
-### Core Evaluation Metrics
+### 1.2 综合成本率与浮存金成本不是同一个比率
 
-| Metric | Description | Excellence Standard |
-|-----|-----|---------|
-| Combined Ratio | (Claims + Operating Expenses) / Premium Revenue | < 100% (underwriting profit) |
-| Underwriting Profit/Loss | Premium Revenue − Claims − Expenses | Consistently positive |
-| Float Size | Total funds available for investment | Larger is better |
-| Float Growth Rate | Trend in float growth | Steady growth |
-| Portfolio Quality | How float is invested | Conservative, highly liquid |
+对适用的财产险分析，可用一致口径写为：
 
-### Underwriting Discipline (Most Important)
+```text
+综合成本率 =（赔付及相关费用 + 承保费用）/ 已赚保费
+浮存金成本率 ≈ 承保亏损 / 平均浮存金
+```
 
-> "We would rather reduce our volume than accept an unattractive risk."
+承保利润则对应负的资金成本。实际应核对公司披露、再保险、准备金、收购及费用口径，不能混用保费收入、已赚保费、现金收款和净保费。
 
-**Berkshire's core principle:** Float only has value when its cost is below the return on investment. If you accept underwriting losses to chase float volume, you end up borrowing money at a higher cost.
+**假设例子（P）：**已赚保费 200，赔付加费用 204，综合成本率 102%；若平均浮存金为 200，承保亏损 4 对应约 2% 的浮存金成本。正成本不等于高息借款，是否有吸引力还取决于相应融资成本、风险和资本要求。
 
-In 2008, Berkshire achieved underwriting profit for the sixth consecutive year, and the cost of $58.5 billion in float was below zero — holding that float actually generated $2.8 billion in income.
+### 1.3 承保纪律与储备质量
 
-**Methods to test underwriting discipline:**
-- Combined ratio history: Was discipline maintained even during periods of intense competition?
-- Performance after catastrophe years (hurricanes, earthquakes)
-- Has the company ever priced aggressively to grab market share?
+| 维度 | 重点问题 |
+|---|---|
+| 定价纪律 | 保费增长是否牺牲预期承保利润，是否能在不合理价格时缩量？ |
+| 准备金 | 有无不利发展，长尾赔付是否低估，释放准备金是否美化盈利？ |
+| 业务组合 | 灾害、地区、客户、保险种类是否集中？ |
+| 再保险 | 保障范围、限额、可收回性及交易对手如何？ |
+| 投资 | 期限、流动性、信用与负债现金流是否匹配？ |
+| 资本 | 极端赔付、监管资本和现金需求是否能同时满足？ |
 
-### GEICO's Sources of Competitive Advantage
+规模大、品牌强或承保当年盈利，不能单独证明纪律。需要跨定价周期并检查准备金发展。不能把投资收益能覆盖当期亏损，当成承保一定合理的证明。
 
-**Cost advantage**: Direct distribution model, no agent intermediaries; operating costs are 15–20% lower than peers.
-This cost advantage is passed on to consumers in the form of lower prices, creating price competitiveness that in turn supports scale expansion.
+### 1.4 浮存金价值的正确处理
 
-### Macro Sensitivities
+浮存金并非越多越好：低价承接风险、需要大量资本、期限短或赔付估计不可靠的增长可能破坏价值。总量稳定也不等于合同没有实际偿付义务。
 
-Insurance's sensitivity to the macro environment is primarily felt on the investment side rather than the underwriting side:
-- **Rising interest rates**: Improves investment returns on float, especially beneficial for insurers with large long-duration bond allocations
-- **Inflation**: Increases claims costs (medical, repair, replacement); compresses margins if underwriting pricing cannot keep pace
-- **Economic recession**: P&C premium volumes shrink as assets decline, but catastrophe insurance demand is inelastic; life insurance claims tend to be counter-cyclical
-- **Capital market crashes**: Affects portfolio values; Berkshire holds large equity positions, so market volatility directly impacts book value
-- **Catastrophe events (earthquakes/hurricanes)**: Short-term underwriting losses, but often bring pricing hardening opportunities — disciplined companies can expand aggressively as competitors retreat
+估值时可以分析承保利润、投资收益及低成本资金的持续性，但要保留负债和资本需求。不能在投资资产已计价后，直接把全部浮存金再作为“隐藏资产”加回。
 
-> "Property/casualty insurance is the core business of Berkshire's prosperity and growth. We've operated in this industry for 57 years. Although we've grown from $17 million to $83 billion — nearly a 5,000-fold increase — we still have significant room to grow." — 2023 Letter
+### 1.5 失效与宏观传导
 
----
+利率上升可能改善新投资收益，也可能降低存量长久期资产价值并影响退保和流动性。通胀可能推高赔付，法律和社会环境变化可能影响长尾索赔。巨灾既可能改变未来价格，也可能先造成不可承受的损失。
 
-## Underwriting Discipline
+判断必须把承保与投资两侧一起分析；不能说保险对宏观的敏感性主要只有投资端。
 
-Underwriting discipline is the core of insurance industry analysis and deserves a dedicated, in-depth treatment.
+## 2. 银行：低成本负债有价值，脆弱融资也可能致命
 
-### The Essence: The Ability to Say "No"
+**B｜历史参照。**1990 年信讨论 Wells Fargo 时关注银行经营、成本与信用风险；2008 年信也回顾了两家爱尔兰银行投资的错误。[B-1990](../SOURCES.md#b-1990)、[B-2008](../SOURCES.md#b-2008)
 
-Underwriting discipline means that an insurer strictly adheres to sound pricing standards when accepting risk, and would rather forgo premium income than write business priced inadequately. National Indemnity's founder Jack Ringwalt upheld the principle of "underwriting must be profitable" from 1941 onward — "everyone in the industry talks about it; very few actually practice it" (1969 Letter).
+这些是特定时期的案例，不能写成巴菲特永久排除银行，或凭历史持仓证明某家银行今天安全。
 
-**The root cause of why underwriting discipline is hard to maintain**: When the industry is profitable, capital floods in and competitors cut prices to grab market share. Holding the line on proper pricing at that point means a sharp drop in volume — which requires enormous courage and organizational culture to sustain.
+### 2.1 主要经济结构
 
-### Three Key Principles
+银行的存款与借款是经营融资的一部分，不适用普通工业企业“债务越低越好”的简单框架。关注负债成本与稳定性、资产质量、期限错配、资本缓冲和管理层风险文化。
 
-> "1. They accept only those risks that they are able to properly evaluate (staying within their circle of competence), and after having evaluated all relevant factors — including worst-case loss scenarios — they determine that those risks have a positive expected profit. These insurers never target market share, and they happily step aside when competitors take business at foolish prices or terms.
-> 2. They strictly limit the business they accept so that a single event or series of related events cannot produce a concentration of losses that threatens the company's solvency." — 2001 Letter
+### 2.2 指标及其解释
 
-### The Relationship Between Underwriting Discipline and Float Cost
+| 指标 | 看什么，而非统一门槛 |
+|---|---|
+| ROA / ROE / 有形权益回报 | 盈利来源、杠杆、资产风险、周期位置 |
+| 净息差与存款成本 | 存款竞争、资产重定价、资金转移和业务组合 |
+| 不良率、逾期和核销 | 定义、展期、出售坏账、确认滞后与贷款结构 |
+| 贷款损失准备 | 对未来损失是否充足，不能脱离分母与口径比较 |
+| CET1 及其他资本要求 | 适用司法辖区、银行类型、附加要求和可用缓冲 |
+| 流动性与存款集中 | 可变现资产、提款速度、未保险存款、批发融资依赖 |
+| 效率与成本 | 服务、合规、科技和风险控制不能被过度削减 |
 
-Underwriting discipline determines the cost of float:
-- Combined Ratio < 100%: Float has a negative cost (others are paying you to invest)
-- Combined Ratio = 100%: Float is free
-- Combined Ratio > 100%: Float has a positive cost, equivalent to high-interest borrowing
+不得把 CET1 >10%、拨备覆盖 >200%、不良率 <1% 等设为跨国家通用的巴菲特标准。监管规则应查询当前监管原文。
 
-Berkshire achieved underwriting profit for 12 consecutive years from 2003 to 2014. Float grew from $41 billion to $84 billion, and cumulative pre-tax underwriting profit over that period totaled $22 billion — free use of tens of billions in capital while earning a return on top of it.
+### 2.3 估值与失效情境
 
-### Organizational Culture Is the Foundation
+可以研究可分配收益、维持资本需要、账面/有形权益及资产质量调整；不要机械用 CFO 减资本开支。压力测试要同时考虑信用损失、存款外流、债券变现损失与融资成本，而非只测试利润下降。
 
-> "We have enormous respect for the underwriting discipline at National Indemnity — a discipline instilled by founder Jack Ringwalt from the very beginning — and we know that once this discipline is broken, it can never be fully restored." — 1980 Letter
+低市净率可能是折价，也可能反映资产减损或资本不足。高净息差也可能是高风险贷款的补偿，而非护城河。
 
-Berkshire never uses premium growth as a metric for evaluating management. Insurance managers know that a drop in volume because they refused to write inadequately priced business will never draw criticism from headquarters — this culture is the bedrock on which sustained underwriting discipline rests.
+## 3. 消费品牌与零售：不要把知名度当作需求不变
 
-### General Re: Discipline Collapse and Rebuilding
+### 3.1 品牌经济性
 
-After acquiring General Re in 1998, underwriting discipline broke down. Under Joe Brandon's leadership, that discipline was rebuilt — proving that even in a large organization, underwriting discipline can be restored, provided top management is unwaveringly committed.
+研究客户为什么选择、愿意付多少、复购是否真实，以及这种选择能否跨产品周期延续。区分持续品牌需求、渠道压货、流行款式和促销驱动。
 
-**Warning against misconceptions:**
-- Size and brand are not equivalent to underwriting discipline — many of the largest, most well-known insurers have long delivered mediocre results
-- "Making up underwriting losses with investment income" is the most dangerous illusion in insurance — in effect, it means gambling with policyholders' money
+| 观察 | 需要拆解 |
+|---|---|
+| 收入增长 | 价格、销量、产品组合、地域、渠道、并购和汇率 |
+| 毛利变化 | 折扣、成本、直销占比、运费与产品结构 |
+| 库存 | 公司与渠道库存、库龄、退货、清仓与预订单 |
+| 品牌健康 | 复购、新客户、年轻客群、全价售出和获客成本 |
+| 扩张回报 | 新门店、新地区、新品类的投入与现金回收 |
 
----
+不能要求涨价 5%—10% 后销量不变才有护城河。也不能把某品牌长期成功解释为客户需求永不变化。
 
-## Insurance Float
+### 3.2 零售与品牌制造不同
 
-### Definition
+低成本零售可能通过低售价、周转、采购、选址、物流密度和会员关系创造价值。低毛利不必然意味着弱生意，高毛利也可能被营销与存货吞噬。
 
-Float is the money an insurer temporarily holds between collecting premiums and paying claims. This money does not legally belong to the insurer, but it can be invested during the holding period. In some workers' compensation or asbestos litigation cases, payouts may span decades, creating extremely long float holding windows.
+研究同店表现、开店成熟曲线、租赁义务、维护支出、退货、缺货及员工效率；不能只看总门店或总收入。
 
-> "Unless you understand this concept, you simply cannot make a sensible judgment about Berkshire's intrinsic value." — 1997 Letter
+### 3.3 历史案例及纠正
 
-### Growth Trajectory
+喜诗在历史材料中展示了经济商誉与现金输出的价值，不能据此要求所有优秀企业都必须全国或全球快速扩张。[B-1983](../SOURCES.md#b-1983)
 
-| Year | Float Size |
-|-----|---------|
-| 1967 (National Indemnity acquisition) | $19 million |
-| 2008 | $58.5 billion |
-| 2021 | $147 billion |
-| 2022 | $164 billion |
+2022 年度信披露的可口可乐投资成本约 13 亿美元、该年股息 7.04 亿美元；年度股息没有超过成本。累计股息与年度股息应分开，也不能用历史成本收益率替代今天价格的前瞻回报。[B-2022](../SOURCES.md#b-2022)
 
-From 1967 to 2022, float grew more than 8,000-fold.
+### 3.4 失效信号
 
-### Three Structural Advantages of Float
+全价需求减弱、渠道库存失衡、消费者迁移、关键产品依赖、产品质量或信誉事件、获客持续变贵、扩张开始依赖不经济投入。单季波动须与机制证据交叉验证。
 
-**1. Cannot be "run on"**: P&C insurance contains no redemption clauses; even if premium income falls, float decreases only very slowly — a stark contrast to the fragility of bank deposits.
+## 4. 媒体、内容与平台：变现方式不是护城河等级
 
-**2. Near-permanent capital**: Even though individual policies constantly flow in and out, total float remains remarkably stable relative to premium income. In economic effect, it resembles permanent capital rather than short-term borrowing.
+**B｜历史变化。**1991 年股东信讨论媒体经济特许权的侵蚀，说明曾经优越的地位需要持续复核。[B-1991](../SOURCES.md#b-1991)
 
-**3. Understated book value**: Float is recorded as a liability on the balance sheet, which actually reduces net assets in a standard book value calculation. But for Berkshire — which can obtain float at zero cost — this "liability" is a hidden asset.
+### 4.1 分开研究三类经济活动
 
-> "Although not recognized in our financial statements, this float is a magnificent asset for Berkshire." — 2022 Letter
+传统媒体的地域渠道与广告联系；内容制作/版权的持续投入与命中率；数字平台的分发、用户关系、供给和变现。名称相近不等于经济结构相同。
 
-### How Float Transmits Competitive Advantage
+不能断言广告模式必然比订阅脆弱，或订阅天然有转换成本。广告需要验证效果与客户替代渠道，订阅需要验证付费留存、内容成本与持续提价能力。
 
-Float provides Berkshire with three layers of competitive advantage:
-1. Low-cost or zero-cost investment capital — enabling large-scale investment without borrowing
-2. Acts as "buyer of last resort" during financial crises (emergency financing to Goldman Sachs and GE in 2008)
-3. Its long-term, stable nature allows investment horizons unconstrained by short-term liquidity pressures
+### 4.2 关键问题
 
-**The irreplicability of float**: Three conditions must be met simultaneously — superior underwriting discipline (driving cost toward zero), massive scale (providing a substantial investment base), and outstanding investment capability (generating excess returns). All three are indispensable.
+研究用户留存、付费转换、每用户收入、广告主集中、内容或流量获取成本、版权期限、分成、平台依赖以及现金内容支出和会计摊销差异。
 
----
+用户数、总播放时间或算法能力不是价值本身；必须连接持续现金回报。网络或数据优势使用 [03-business-moat.md](03-business-moat.md) 的因果检验。
 
-## Banking
+### 4.3 失效模式
 
-Buffett has held large positions in bank stocks (Wells Fargo, Bank of America, etc.) and has also learned hard lessons (Salomon Brothers, Irish banks). He believes excellent banks can be outstanding investments, yet understands that leverage makes banking one of the most dangerous industries of all.
+内容成本增长快于变现、用户多平台迁移、流量入口变化、广告效果下降、创作者/版权方议价增强、监管影响数据或分发。大平台的规模本身不保证这些问题不会发生。
 
-### The Industry's Special Nature
+## 5. 公用事业与能源：必须拆开分析
 
-- **Inherently high leverage**: Banks typically operate at 15–20x leverage; modest credit losses can destroy shareholder equity
-- **Credit quality is the lifeline**: The quality of the loan portfolio determines long-term fate; problems typically surface only years later
-- **Management integrity is critically important**: Banking's complexity makes fraud and concealment easier
+### 5.1 受监管公用事业
 
-### Core Evaluation Metrics
+**B｜前后材料要一起看。**2007 年信讨论需要较多资本但可赚取适当回报的业务；2023 年度信对部分地区的监管变化和 BHE 野火责任风险作出重要修正。[B-2007](../SOURCES.md#b-2007)、[B-2023](../SOURCES.md#b-2023)
 
-| Metric | Description | Excellence Standard |
-|-----|-----|---------|
-| ROE | Return on Equity | Consistently > 15% |
-| ROA | Return on Assets | > 1.2% (high-quality banks) |
-| NPL Ratio | Non-Performing Loans / Total Loans | < 1% |
-| Provision Coverage Ratio | Loan Loss Reserves / NPLs | > 200% |
-| CET1 | Core Equity Tier 1 / Risk-Weighted Assets | > 10% (with buffer above regulatory minimum) |
-| NIM | Net Interest Margin (loan rate − deposit cost) | Compare vs. industry; watch trend |
-| Efficiency Ratio | Operating Expenses / Revenue | < 55% |
+**P｜分析。**许可经营区域和必要基础设施不等于股东回报受保证。区分允许回报、实际实现回报、纳入费率基数的投入，以及资本回收的时间和条件。
 
-### Buffett's Warnings on Banking
+| 项目 | 需要核实 |
+|---|---|
+| 监管 | 地区制度、调价时滞、成本可回收性、历史决定及变化 |
+| 投入 | 维护、扩容、减排、输电和安全投资；预算超支风险 |
+| 融资 | 到期结构、利率、母子公司支持和现金可上划性 |
+| 尾部责任 | 火灾、事故、环境、保险保障与法律责任范围 |
+| 现金 | 会计利润、资本开支与真实分配能力的差异 |
 
-- Avoid banks with opaque loan portfolios
-- Avoid banks overly reliant on capital markets activities (as opposed to traditional lending and deposit-taking)
-- If management says "loan quality is very good" but cannot elaborate, that is a red flag
-- During banking crises, "looks cheap" is often a trap — because real losses have not yet surfaced
+不得只保留“稳定现金流、监管保护”的正面模板。法律与监管事实需要最新官方资料；历史信件并非当前诉讼结论。
 
-> "Banking doesn't have to be a bad business. If management can manage loans well and control costs, ROE can reach 20% or higher. But if management makes serious mistakes — which is not uncommon in banking — shareholders can lose everything." — 1991 Letter
+### 5.2 油气与资源
 
-### Wells Fargo's Long-Term Appeal (Historical)
+研究资源质量、成本曲线、产量递减、维持产量的投入、储量替换、价格敏感性、税费/分成、弃置与环境义务。地质和商品价格判断仍有重大不确定性。
 
-Large purchase in 1990 during a panic: California's largest deposit base (extremely low-cost funding source) + management (Carl Reichardt) renowned for efficiency and discipline + market overly panicked about the California real estate crisis.
+不能将资源储量直接乘现价作为股东价值，也不能用景气顶峰现金流乘稳定消费股倍数。低成本是相对优势，不是消除商品价格风险。
 
-Cost advantage (low-cost deposits) + cross-selling capability + conservative credit culture = sustained high ROE
+**历史反证。**2008 年信对 ConocoPhillips 买入时点的反省提醒，业务资源与价格纪律必须同时研究。[B-2008](../SOURCES.md#b-2008)
 
-But Wells Fargo's later fake-accounts scandal demonstrated another banking risk — once corporate culture corrodes, the consequences are extremely severe.
+管道、上游生产、炼化、贸易和电力业务不能混成一个“能源”模型。合同期限、对手方、吞吐、维持投入和监管各有差异。
 
-### Case Study in Failure: Irish Banks
+## 6. 铁路与基础设施：不可复制不等于无限回报
 
-> "In 2008 I spent $244 million buying two Irish banks that appeared cheap to me. By year-end, I had lost 89% of my investment. In tennis terms, what I did is called an 'unforced error.'" — 2008 Letter
+研究线路与节点、运输密度、客户连接、替代运输方式、服务质量和全程成本。网络难以重建可能支持优势，但客户仍可能换方式、换路线、改变生产地点或减少需求。
 
-### Why He Ultimately Moved Away from Banking
+**B｜现金流提醒。**2023 年度信对 BNSF 讨论了资本支出与折旧之间的差异及经营表现问题，不能仅凭资产重要性忽略可分配现金。[B-2023](../SOURCES.md#b-2023)
 
-The "black box" nature of banking makes it nearly impossible for outside investors to truly assess risks — loan quality, derivatives exposure, and trader behavior can all accumulate fatal vulnerabilities beneath a calm surface. After 2020, Buffett substantially reduced almost all bank holdings, including Wells Fargo, held for many years.
+### 6.1 指标
 
-### Macro Sensitivities
+营业比率、运量/运价与结构、周转、准点、人员生产率、安全事故、燃料、维护资本开支、增长投入及服务水平。不能用统一营业比率门槛比较不同网络与货种，也不能将靠少维护形成的低成本视为进步。
 
-Banking is one of the industries most sensitive to the macro environment:
-- **Rising interest rates**: Net interest margins expand in the short term, but long-duration bond portfolios incur unrealized losses, and rising deposit costs can erode spreads
-- **Economic recession**: Loan default rates rise; credit losses are amplified (under high leverage, modest losses can wipe out equity)
-- **Deflation/falling asset prices**: Collateral values decline, loan quality deteriorates sharply (the core mechanism of the 2008 crisis)
-- **Tightening regulation**: Higher capital requirements compress ROE; business scope restrictions constrain revenue diversification
-- **Liquidity crisis**: Bank runs occur far faster than in other industries; a collapse in market confidence can destroy an apparently healthy institution within days
+### 6.2 风险与估值
 
----
+关注监管、劳资、货种衰退、替代方式、客户集中、事故责任和更新投资。经济总量增长不必然转成每条线路或每家公司的运量增长。资产重置成本不是普通股股东可立即兑现的价值。
 
-## Consumer Brands & Retail
+## 7. 科技、软件与互联网：行业标签不能替代可预测性
 
-One of Buffett's most successful investment areas (Coca-Cola, Gillette, See's Candies, Nebraska Furniture Mart).
+**B｜历史边界。**1999 年股东信的问题并不是科技不能创造社会价值，而是无法可靠识别哪些参与者拥有持久经济优势。[B-1999](../SOURCES.md#b-1999)
 
-### See's Candies: The Turning Point in Investment Philosophy
+### 7.1 验证商业优势
 
-Acquired See's for $25 million in 1972, fundamentally changing Buffett's approach — from Graham-style "buying cheaply" to Munger-style "buying great businesses at fair prices." See's taught Buffett three things: (1) brand power can generate returns far beyond tangible assets; (2) businesses with pricing power can withstand inflation; (3) asset-light, high-cash-flow business models are far superior to capital-intensive ones.
+区别短期技术领先与客户工作流、生态、渠道、成本、信任或网络形成的结构优势。技术领先也可以持续，但必须解释更新所需投入和竞争者绕开路径；不能先验判定所有技术领先都短命，所有网络和数据都永久。
 
-> "Owning See's taught us much about the evaluation of franchises. We've made significant gains on certain stock investments that we would not have made had it not been for the lessons we learned at See's." — 1991 Letter
+### 7.2 财务与单位经济
 
-By 2007, See's had contributed more than $1.3 billion in pre-tax profit, with almost no additional capital required. **Asset-light + pricing power = compounding machine.**
+| 维度 | 关键检查 |
+|---|---|
+| 收入质量 | 合同、用量、预收、续约与实际回款 |
+| 客户关系 | 毛留存与净留存、客户集中、扩容和提价的贡献 |
+| 增长成本 | 销售营销、获客回收、渠道佣金和服务成本 |
+| 研发与产品 | 必要维护、产品替代速度、资本化政策 |
+| 现金流 | 股权薪酬、稀释、数据中心/设备、租赁和长期采购承诺 |
+| 增量回报 | 新产品、客户群和地区是否真的改善经济收益 |
 
-### Coca-Cola: Eternal Consumer Logic
+NRR、用户数、ARR 或 GMV 不能自动证明护城河，也不能替代可归属普通股的现金。当前亏损不意味着任何估值都失效；但长期现金流缺乏证据时不能硬给精确价值。
 
-Began buying heavily in 1988, ultimately investing $1.3 billion. People all over the world drink more Coca-Cola every day — a trend that won't change for decades. Has held the stake for more than 35 years; annual dividends now far exceed the original purchase cost.
+### 7.3 AI 等快速变化的技术情景（P）
 
-### Nebraska Furniture Mart: The Retail Success Template
+不要预设技术进步必然利好或毁灭某家公司。分别检验：客户是否迁移预算；现有任务是否更便宜；节约归客户、供应商还是股东；原有数据与渠道优势是否仍有价值；新的算力、研发和服务投入是否抵消收入增长。
 
-Mrs. B (Rose Blumkin) immigrated to America from Russia and built the largest home furnishings store in the U.S. from scratch, constructing a moat through thin margins, high volume, and extremely low-cost operations.
+这是研究问题清单，不是对某项技术当前能力或某家公司最新竞争地位的事实判断。实际使用时必须取得当期证据。
 
-> "I'd rather wrestle grizzlies than compete with Mrs. B."
+### 7.4 历史案例的使用边界
 
-**Flywheel logic:** Cost advantage (low rent + direct purchasing) → lower prices → greater scale → lower costs
+旧版对 Apple、IBM、Amazon 和 Google 的故事不再作为未经逐项核实的买入原因、持仓时点和收益数据库。需要使用具体案例时，另查当期原始问答或披露，并区分巴菲特本人、其他投资经理及分析者的解释。
 
-### Consumer Brand Moat Characteristics
+不能把“某科技公司也有消费品牌属性”改写成它从此没有技术、供应链或平台风险。
 
-- **Repeat purchase**: Daily/weekly, habitual, no need to re-decide each time
-- **Emotional bond**: Consumers form emotional attachments to brands; rational factors recede
-- **Pricing power test**: Raise prices 5–10%, with almost no change in volume → brand moat is real
-- **Global expansion**: Same product distributed globally, with declining marginal costs
+## 8. 专业服务与 IT 服务（P｜新增应用模块）
 
-### Risks in Consumer Retail
+这一模块是本项目对服务型企业的分析扩展，不冒称巴菲特专属行业模板。
 
-> "Retailers have to be smart every day. Competitors are always copying you, and then surpassing you."
+研究客户为何外包、公司提供稀缺专业判断还是可替代人力、项目成果如何计价、客户关系是否依赖个别人员，以及经营现金流如何穿过人员和项目风险。
 
-- **Brand aging**: Tied to a specific age group while losing younger consumers
-- **Health/cultural trends**: Carbonated beverages under pressure from health consciousness
-- **Channel disruption**: E-commerce has rewritten the rules of distribution
-- **Moats in retail are usually narrower than in consumer brands**: Many retailers once grew astonishingly fast, then reversed sharply
-- **Dexter Shoe lesson**: Some acquired retail businesses performed poorly, demonstrating the extreme importance of choosing the right management in retail
+| 关键变量 | 分析问题 |
+|---|---|
+| 订单与合同 | 已签金额是否可取消，何时转成收入，利润与现金质量如何？ |
+| 利用率与人力 | 人员结构、工资、离职、培训和闲置成本如何影响收益？ |
+| 定价 | 按工时、固定项目、托管还是成果收费，效率收益归谁？ |
+| 客户关系 | 续约、多供应商、采购集中与转换成本是否真实？ |
+| 增长 | 有机增长、并购、汇率和业务组合贡献分别多少？ |
+| 技术变化 | 自动化减少工时，是否也改变需求、交付成本和议价？ |
 
-### Macro Sensitivities
+失效模式包括客户内建能力、核心服务商品化、关键员工流失、合同责任、过度收购和技术变化使旧计费方式失去价值。不能只凭“人力服务是轻资产”就认定维护成本很低。
 
-- **Economic recession**: Staple consumer products like Coca-Cola and See's are relatively resilient; discretionary consumption (jewelry, furniture) sees significant demand decline
-- **Inflation**: Consumer brands with pricing power can pass through costs; rising raw material prices particularly test pricing capability
-- **Rising interest rates**: Discount values of high-multiple consumer brands decline; discretionary consumption under pressure from higher credit costs
-- **Currency fluctuations**: Global consumer brands (Coca-Cola's worldwide sales) are affected by foreign exchange, but also form a natural hedge
+## 9. 交易平台、拍卖与资产处置服务（P｜新增应用模块）
 
----
+研究供给侧资产来自谁、需求侧买家为何聚集、平台解决了哪些物流/信息/信任问题，以及网络效应发生在全球、区域还是某一资产种类。
 
-## Media & Publishing
+关键指标包括客户留存及集中、供给量、成交率、变现回收、买家深度、费率、地理覆盖、物流/场地利用率、单位处理成本和扩张投入。
 
-Buffett once held large positions (The Washington Post, Buffalo News), then largely exited. In 2020, newspaper assets were sold to Lee Enterprises, marking a formal exit from the media industry.
+失去客户可能是价格纪律，也可能是服务、技术、竞争或关系变化。要取得客户迁移与对手经济性证据，不能仅凭管理层声称主动放弃业务就认定护城河稳定。
 
-### The Former "Toll Bridge"
+现金积累、成熟核心业务和新业务投资需分别估值。不能因为把全部价格分配给核心业务后余值很小，就自动把新业务称作免费期权；还要扣后续投入、亏损、履约与潜在稀释，并验证核心估值没有过度乐观。
 
-In the 1970s and 1980s, a city's monopoly daily newspaper was like a "toll bridge" — advertisers had no choice but to go through it to reach local consumers. These businesses shared common characteristics: minimal capital requirements, strong pricing power, and stable, spring-like cash flows.
+## 10. 航空与纺织：高警惕样本，不是永久黑名单
 
-- **Local newspaper monopoly**: A city typically had only one mainstream newspaper; advertisers had no alternative
-- **Stable classified ad revenue**: Job listings, real estate, automotive advertising
-- **High barriers to entry**: Printing facilities, distribution networks
+### 10.1 航空
 
-### Buffalo News: A Classic in Monopoly Profits
+研究路线与时刻资源、服务网络、需求周期、可售座位、单位收益、燃油、人员、飞机资本/租赁、债务和外生事件。行业整合不自动保证理性供给，独特细分模式也不能只靠一个市场份额数字被认定有护城河。
 
-Acquired in 1977 after a fierce competitive battle; after defeating the competition, it became Buffalo's only daily newspaper. Highly profitable during the monopoly period, but it ultimately could not escape the industry's decline. This case perfectly illustrates the core philosophy that "industry fate outweighs management capability."
+**B｜历史边界。**2007 年股东信以航空说明高资本需求可能与差经济回报并存；它是风险案例，不是任何价格下都不可能投资的数学定理。[B-2007](../SOURCES.md#b-2007)
 
-### The Process of Moat Erosion
+### 10.2 纺织与同质化制造
 
-> "The economics of newspapers, television stations and magazines have eroded somewhat — though much of that erosion has been leisurely — and these businesses are now far less exceptional than they were 25 years ago." — 1991 Letter (a landmark warning)
+**B｜历史机制。**1985 年信回顾纺织退出，并指出行业普遍投入可能让降本利益主要转给客户。[B-1985](../SOURCES.md#b-1985)
 
-The internet systematically destroyed this moat:
-- Craigslist / classified listing sites eliminated classified advertising (once the lifeblood of newspaper profits)
-- Digital media broke local monopolies
-- Readers migrated to free online content; the commoditization of news caused subscription revenue to plummet
+**P｜应用。**评估成本位置、贸易与运输、客户替代、产能反应、资本更新及关停残值。工程上的效率改善不等于股东得到更高回报；但也不能由此否定所有制造业和所有成本优势。
 
-**Buffett's media investment lesson:**
-> "Technological disruption can destroy a moat built over decades in a matter of years. Industry analysis must include thinking about 'what technological threats could render this moat irrelevant.'"
+## 11. 跨行业输出模板（P）
 
-The **durability** of a moat matters more than its current **width** — this is the deepest lesson left by the media industry.
+```text
+行业/业务单元及适用口径：
+客户、收费与现金收取方式：
+真正影响价值的关键变量：
+竞争优势机制与替代路径：
+必要维护、增长投入及资本回收：
+财务指标的定义与可比性限制：
+恶劣情境下的现金、负债与融资需求：
+支持原投资逻辑的证据：
+可能使原逻辑失效的证据：
+对估值、资本配置和组合的影响：
+```
 
-### Modern Media / Platform Analysis Framework
-
-**New moat sources (digital era):**
-- Subscription stickiness (Netflix, Spotify)
-- Content ecosystem (Disney's IP portfolio)
-- Data network effects (algorithm-driven recommendation platforms)
-
-**Key question:** Is this company's revenue derived from genuine user value, or from monetizing user attention (advertising)? The latter has a more fragile moat.
-
-### Macro Sensitivities
-
-- **Economic recession**: Advertising spending is highly pro-cyclical; ad budgets are the first to be cut in downturns; subscription revenue is relatively stable
-- **Inflation**: Paper, printing, and distribution costs rise; traditional media no longer has sufficient pricing power to pass through costs
-- **Technological disruption**: The internet's impact on newspapers is structural, not cyclical — this is not a macro problem but an industry extinction event
-
----
-
-## Energy & Utilities
-
-Berkshire Hathaway Energy (BHE, formerly MidAmerican Energy, acquired in 2000) is an important capital allocation vehicle for Buffett. Under Greg Abel's management, it grew from an Iowa electric utility into a vast utility empire spanning the United States and the United Kingdom.
-
-### Industry Characteristics
-
-- **Capital-intensive, long-cycle**: Payback periods for power grids, pipelines, and power plants are 20–40 years
-- **Regulated, stable returns**: Utilities are regulated; return rates are set by regulators
-- **Stable cash flows**: Demand is inelastic — people don't cut electricity because rates rise 5%
-
-### Why Buffett Likes Regulated Utilities
-
-- Stable, predictable cash flows
-- Can absorb large amounts of capital (Berkshire's capital needs deployment)
-- Regulation provides implicit protection (competition cannot eliminate them)
-- Renewable energy investment has policy-supported long-term growth potential
-
-> "Charlie and I are enthusiastic about utility businesses. In this capital-intensive industry, new project investment sizes are often very large. Such projects give Berkshire the opportunity to put large sums of money to work at decent returns." — 2008 Letter
-
-### Renewable Energy: The Iowa Case
-
-> "When it comes to wind, Iowa is the Saudi Arabia of the United States." — 2016 Letter
-
-Wind power generation in Iowa grew from zero to nearly 20% of total installed capacity, making it one of the states with the highest wind energy penetration in the U.S. The resulting low-cost renewable electricity attracted large numbers of data centers (technology companies with enormous power consumption) to build facilities in the state.
-
-### Oil Investments: Opportunism and Lessons
-
-**PetroChina (success)**: Bought a 1.3% stake for $488 million in 2002, believing the market value was far below the value of its oil reserves. Sold in 2007 for approximately $4 billion, roughly an 8x gain.
-
-**ConocoPhillips (lesson)**: Made a large purchase at peak oil prices in 2008; oil prices subsequently collapsed. Buffett admitted he "bought a large amount of ConocoPhillips stock when oil and gas prices were near their all-time highs," calling it an error in judgment.
-
-**Occidental Petroleum (recent)**: Provided $10 billion in preferred stock financing in 2019 to support its acquisition of Anadarko, then continued building a common stock position in the open market — reflecting confidence in the long-term value of U.S. oil and gas assets.
-
-### Evaluation Points
-
-- Regulatory friendliness (historical rate approval track record)
-- Sustainability of capital expenditure plans (aging transmission networks, new energy construction)
-- **Interest rate sensitivity**: High leverage + capital-intensive assets = valuation pressure when rates rise
-- Economic growth trends in the service territory (affects electricity demand)
-
-### Macro Sensitivities
-
-- **Rising interest rates**: Utilities are viewed as "bond substitutes"; rising rates cause significant valuation pressure; high debt increases interest expense
-- **Inflation**: Capital expenditure costs (steel, equipment, labor) rise; regulatory approval of rate adjustments lags, compressing short-term profits
-- **Energy price volatility**: For power generators, fuel cost is the key variable; the regulated model allows pass-through via rates, but with a time lag
-- **Policy and regulatory changes**: Renewable energy tax incentives affect investment returns; shifts in the regulatory stance directly affect allowed rates of return
-
----
-
-## Railways
-
-In 2009, Buffett acquired BNSF Railway outright for $34 billion — Berkshire's largest single acquisition in its history. Railways were once Wall Street's nightmare — capital-intensive, heavily regulated, powerful unions, poor returns. But after deregulation and consolidation in the 1980s, North American railways consolidated from more than seventy companies into six major systems, fundamentally improving the competitive landscape.
-
-> "This is an all-in wager on the economic future of the United States." — Buffett, 2009
-
-### Sources of Competitive Advantage
-
-- **Irreplicability**: The major U.S. rail network took 100 years to build; it simply cannot be rebuilt today. BNSF's assets have a book value of $70 billion; replicating those assets would require at least $500 billion and decades of time
-- **Efficient scale**: Major trunk lines are already saturated; new entrants would find it unprofitable
-- **Cost advantage**: A single train can move the same freight as trucks while using one-third the fuel; as energy costs rise and environmental pressures increase, this efficiency advantage will only become more pronounced
-
-> "Railroads are essential to the future of the U.S. economy. From cost, fuel consumption, and carbon intensity, rail is clearly the most efficient way to move heavy freight to distant destinations. Without railroads, this country simply doesn't work." — 2023 Letter
-
-### The Other Side of Railways: Capital Consumers
-
-Buffett candidly acknowledges railways' weakness — just to maintain BNSF's current operating level, annual capital expenditures must substantially exceed depreciation. In the 14 years since acquisition, cumulative capital expenditure above and beyond depreciation has totaled $22 billion. This means the actual distributable profit of a railway company is far below reported earnings.
-
-### Core Evaluation Metrics
-
-| Metric | Description | Excellence Standard |
-|-----|-----|---------|
-| Operating Ratio | Operating Costs / Revenue | < 65% (industry-leading) |
-| Freight Volume Trend | Correlation with GDP | Tracks economic activity |
-| Fuel Efficiency | Fuel is the primary variable cost | Continuously improving |
-| Capital Expenditure Intensity | Required investment to maintain safety and efficiency | Compare vs. depreciation |
-
-**Long-term value judgment:** The more prosperous the U.S. economy, the greater the freight volume, and the more railways benefit — perfectly aligned with Buffett's long-term belief in "betting on America."
-
-> "A century from now, BNSF will still be a vital asset for this country and for Berkshire. Count on it." — 2023 Letter
-
-### Macro Sensitivities
-
-- **Economic cycle**: Freight volume is highly correlated with GDP; in a recession, coal, grain, and automotive volumes fall, and the operating ratio rises
-- **Energy prices**: Fuel is the primary variable cost; rising oil prices directly compress margins, though railways can pass some through via fuel surcharges
-- **Rising interest rates**: Capital-intensive industry; high debt increases financing costs; infrastructure valuations are pressured by higher discount rates
-- **Trade policy**: Import/export freight volumes are affected by tariffs and trade frictions; coal exports are constrained by international energy policy
-- **Decarbonization trend**: Long-term positive for railways (lower carbon footprint than trucks); may shift freight share toward rail
-
----
-
-## Technology & Internet
-
-Buffett long avoided technology stocks, but began buying Apple aggressively in 2016. This shift reveals his framework for analyzing technology companies.
-
-### Buffett's Framework for Analyzing Technology
-
-**Key question: Is the moat a temporary technology lead, or a structural advantage?**
-
-| Moat Type | Durability | Example |
-|---------|------|-----|
-| Technology leadership | Low (can be surpassed/copied) | Early Nokia |
-| Network effects | High (stronger with more users) | WeChat, Visa |
-| Switching costs | High (high migration cost) | SAP, Apple ecosystem |
-| Data flywheel | High (data accumulation is irreversible) | Google Search |
-| Brand | High (emotional bond) | Apple hardware |
-
-> "We don't own technology stocks, though we think technology products and services will profoundly change our society just as much as you do. Our problem is that we don't know which of the many participants in the technology industry will end up with truly durable competitive advantages." — 1999 Letter
-
-### IBM: A Failed Attempt
-
-In 2011, Buffett unexpectedly made a large investment in IBM, committing more than $13 billion, believing IBM had deep customer stickiness and stable cash flows. But the cloud computing revolution was eroding IBM's traditional businesses, and Buffett failed to foresee this structural shift. He gradually sold out most of the IBM position in 2017–2018, frankly acknowledging that "my assessment of IBM was wrong." This case validates his early caution — even Buffett can misjudge the technology sector.
-
-### Why He Bought Apple (An Important Case Study)
-
-Buffett **redefined Apple as a consumer goods company, not a technology company**:
-
-- Moat = brand emotional bond + iOS ecosystem switching costs
-- The psychological and economic cost for users to switch phones is extremely high (photos, apps, habits, device interconnectivity)
-- Can be understood through the consumer brand analysis framework (pricing power, repeat purchase, emotional value)
-
-Began buying in 2016; by 2023, Apple accounted for nearly 50% of Berkshire's equity portfolio — the most profitable stock investment Berkshire has ever made.
-
-> "Apple is a remarkable company. People buy iPhones because of iPhones, just like people drink Coca-Cola because of Coca-Cola."
-
-### The Valuation Challenge for Technology Companies
-
-- Growth-stage companies typically have no current earnings; traditional valuation methods break down
-- Alternative metrics like user counts, GMV, and MAU require caution — they are still far removed from real profitability
-- Buffett's principle: **if intrinsic value cannot be reliably estimated, don't invest** — no matter how impressive the company looks
-
-### Honest Reflection on Missing Amazon and Google
-
-> "I was too dumb. I studied Amazon but didn't buy. I understood what Bezos was doing, but I underestimated how far he could take it."
-
-GEICO spends large amounts on Google advertising every year; Buffett should have seen the power of Google's business model earlier than almost anyone. This is a classic "miss within the circle of competence" — more painful than missing something outside the circle. Better to miss than to overreach.
-
-### Macro Sensitivities
-
-- **Rising interest rates**: High-growth tech company valuations rely heavily on discounting far-future cash flows; rising rates are devastating (validated in 2022)
-- **Economic recession**: Ad-tech companies (Google, Meta) are pro-cyclical; SaaS subscription models are relatively resilient; consumer tech (gaming, streaming) is partly counter-cyclical
-- **Regulation**: Antitrust investigations and data privacy legislation (GDPR, etc.) pose structural risks to platform companies
-- **Geopolitics**: Geopolitical risks around supply chains (semiconductors) and market access (China) are increasingly prominent
-
----
-
-## Industries to Avoid (Counter-Examples)
-
-### Airlines
-
-> "Since Kitty Hawk, the net return from all airlines' efforts has been minus zero. Investors have poured money into a bottomless pit, attracted by the lure of big margins in a boom and comforted by the knowledge that the great Orville Wright had done it first. Had a farsighted capitalist been present at Kitty Hawk, he would have done his successors a huge favor by shooting Wilbur down." — 1992 Letter
-
-**Structural industry problems:**
-- Seats are a commodity: routes can be replicated by any competitor with no differentiation
-- High fixed costs + strong cyclicality + uncontrollable fuel prices
-- Powerful unions; labor costs are rigid
-- Once capacity is reduced, competitors immediately fill the void
-
-**A history of three painful encounters:**
-1. **1989**: Invested $358 million in USAir preferred stock. From 1990 to 1994, the company accumulated $2.4 billion in losses; preferred stock fell to 25% of cost before eventually returning principal — a harrowing experience.
-2. **2016**: Concluded the industry had oligopolized; bought all four major U.S. airlines (Delta, Southwest, United, American).
-3. **2020**: COVID outbreak, sold at a loss, admitted it was a mistake.
-
-> "Richard Branson was asked how to become a millionaire. He said: 'There's really nothing to it. Start as a billionaire and then buy an airline.' Your chairman has ignored this advice." — 1996 Letter
-
-**The one exception — NetJets:**
-Fractional jet ownership, 75% market share, a genuine moat. It is the **business model** that is different, not the industry itself, that determines investment value.
-
-### Macro Sensitivities (Airlines)
-
-- Demand is highly cyclical; business travel is the first to be cut in half during recessions
-- Fuel costs (30–40% of operating costs) fluctuate sharply with oil prices
-- Black swan events (pandemics, 9/11, wars) cause structural demand shocks
-- Rising interest rates increase aircraft financing costs
-
----
-
-### Textiles
-
-Buffett's most important counter-example, and the origin of Berkshire (1965–1985).
-
-> "A good managerial record is far more a function of what business boat you get into than it is of how effectively you row." — 1985 Letter
-
-**Four core lessons:**
-
-1. **Industry economics trump management capability**
-   Ken Chace and Gary Morrison were rated by Buffett as equal to the managers of his most profitable businesses — yet they could not fight industry structure.
-   > "When a management with a reputation for brilliance tackles a business with a reputation for bad economics, it is the reputation of the business that remains intact." — 1985 Letter
-
-2. **The "Standees at a Parade" Trap**
-   Each textile mill, viewed in isolation, had a rational case for each new capital investment. But when everyone did it, overcapacity drove down prices across the industry — all participants invested more capital, yet returns remained flat.
-   > "The promised benefits from these textile investments are illusory... It's like everybody standing up to get a better view at a parade. Each time a company invested and got the promised cost reduction, all that happened was that the ante was raised for all the other textile producers." — 1985 Letter
-
-3. **Supply shortages are extremely brief**
-   > "The most recent time it appeared that the textile business would have a period of subnormal supply, the period of subnormal supply lasted the better part of a morning." — 1982 Letter
-
-4. **Scale cannot rescue a bad industry**
-   Burlington Industries was the largest company in textiles: $1.2 billion in sales in 1964 (24 times Berkshire's), growing to $2.8 billion by 1985, with cumulative capital expenditure over the period of approximately $3 billion. The result: sales volume declined in real dollar terms, margins and returns far below 20 years prior, and stock price adjusted for inflation was only one-third of the original.
-
-**Buffett's candid admission:**
-> "I wanted it to work, so I kept making investment decisions that were more optimistic than the facts warranted. (I even bought another New England textile company.) Wishful thinking has no place in business; in business it is a poison." — 2012 Letter
-
-**The significance of the transformation:** The textile operations were closed in 1985. The 1967 use of textile business cash to acquire National Indemnity proved to be the most pivotal turning point in Berkshire's history. These 20 years of struggle directly gave birth to the philosophical shift toward "buying excellent businesses at fair prices."
-
-**Main failed companies:**
-- Berkshire Hathaway Textile Mills (New Bedford): operated 1965–1985
-- Burlington Industries: $3 billion in cumulative investment over 20 years; negative shareholder returns (inflation-adjusted)
-- Waumbec Textile Mills: acquired by Buffett in an attempt to generate synergies; ultimately closed in 1980
-
-**The universality of the "Standees at a Parade" effect:** This effect is not unique to textiles but is the common curse of all commodity-like industries — airlines, retail, banking, telecommunications. Any industry where products lack differentiation and competitors can freely enter faces the same economic predicament.
+行业手册的任务是帮助提出正确的问题，而不是免除对具体企业、价格和证据的研究。

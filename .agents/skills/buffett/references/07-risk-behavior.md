@@ -1,228 +1,165 @@
-# Risk Identification and Investment Psychology
+# 07｜风险、持有与卖出、投资行为
 
-> When to read this file: When deciding when to sell, identifying value traps, assessing leverage/inflation/derivatives risk, or recognizing your own behavioral biases.
+> **版本：2.0｜修订日期：2026-10-22**  
+> 适用：持有、减仓、卖出、换仓、价值陷阱、杠杆、衍生品及行为偏差。  
+> 来源标记遵循 [SOURCES.md](../SOURCES.md)。卖出复核清单与组合风险方法均为项目扩展 P。
 
----
+## 1. 长期持有不意味着停止更新判断
 
-## When to Sell (Clear Criteria)
+**B｜卖出边界。**CNBC 保存的 2002 年股东大会片段摘要说明，巴菲特在判断长期竞争优势削弱时会考虑出售；不是必须等到优势完全消失。[A-2002-SELL](../SOURCES.md#a-2002-sell)
 
-Buffett's ideal is to "hold forever," but that ideal has preconditions. The following four conditions warrant considering a sale:
+**B｜纠错。**2024 年度信将拖延纠正错误视为重要问题。[B-2024](../SOURCES.md#b-2024)
 
-**Condition One: Intrinsic Value Is Severely Overestimated**
-- The current price far exceeds a reasonable estimate of intrinsic value
-- The market is offering a premium you cannot refuse
-- Capital can be redeployed to opportunities with greater margin of safety
+**P｜本项目的核心规则：**判断应基于从今天起的价值、回报、风险和可执行替代，而不是成本价、过去最高价或曾经写过的结论。未知与反证必须可以改变行动。
 
-> "We are willing to hold a stock on the premise that we bought an excellent business at a reasonable price. If the market offers a price far exceeding intrinsic value, selling is rational."
+## 2. 开放式卖出复核：不是封闭的四项计票
 
-**Condition Two: The Moat Has Been Fundamentally Destroyed**
-- Not temporary competitive pressure, but structural change
-- Technological disruption rendering the core competitive advantage obsolete
-- A fundamental shift in the regulatory environment
-- Key distinction: differentiating "temporary difficulty" from "permanent impairment"
+以下任何一项都可能触发重新研究，但不是自动平仓命令。行动要结合证据强度、损失后果、价格、流动性及账户限制。
 
-**Condition Three: Management Integrity Is in Question**
-- Accounting fraud or material deception
-- Serious self-dealing in capital allocation decisions
-- Once discovered, sell immediately. Integrity problems do not fix themselves.
+| 复核理由 | 需要确认 | 可能的行动 |
+|---|---|---|
+| 核心判断被证伪或显著削弱 | 原来为何持有，新证据改变了哪个关键假设？ | 更新估值，减仓或退出，不等彻底毁坏 |
+| 前瞻回报不足 | 企业虽好，当前价格是否把好结果计入过多？ | 持有、停止加仓、减仓或卖出，取决于比较 |
+| 管理层/报表可信度受损 | 是普通失误、疑点、可信指控还是已证实失信？ | 停止依赖原叙事，优先控制风险并核实 |
+| 生存或融资条件变化 | 到期债务、抵押、索赔、监管资本或现金需求变了吗？ | 提前调整，不等会计报表出现最终损失 |
+| 出现更好的实际用途 | 是否读取当前持仓并比较税费后经济结果？ | 只在差异稳健且可执行时换仓 |
+| 组合或个人约束变化 | 集中、相关风险、流动性、资金期限或义务改变了吗？ | 即使公司未变，也可能减仓 |
+| 原策略结束或权利结构改变 | 事件完成、收购、清算、证券转换等 | 按新机会而非旧叙事重新评估 |
 
-> "When I realize I've hired a dishonest person, I have no interest in thinking about how smart he might be."
+不因恰好没有命中这张表就拒绝考虑其他合理理由；它是检查清单，不是穷尽性的巴菲特卖出定律。
 
-**Condition Four: A Significantly Better Opportunity Exists**
-- Only switch positions when the gap is very clear
-- The friction costs of frequent switching (taxes, commissions, poor decisions) erode returns
-- You should not casually replace a high-quality holding based on short-term valuation differences
+## 3. 持有、不加仓、减仓与退出是不同决定
 
-**Reasons You Should NOT Sell (Common Mistakes):**
-- The stock price has fallen (a lower price does not mean value has changed)
-- The overall market has declined (a change in Mr. Market's mood)
-- An analyst has downgraded the stock (unless they've uncovered a material issue you missed)
-- Pessimistic macroeconomic forecasts
+“今天不买”不自动推出“今天卖掉”。税费、价差、替代机会、持仓规模和判断误差，可能使已有持仓仍值得保留。相反，成本很低也不能证明继续持有合理。
 
----
+推荐分成三个问题：
 
-## Value Traps
+1. **独立价值：**这项资产在今天价格下仍能提供怎样的回报与损失分布？
+2. **边际配置：**下一元资本应该投入这里、已有其他持仓、其他机会，还是保留流动性？
+3. **存量调整：**为了改善组合，卖出多少才值得承担切换成本与新的风险？
 
-**Definition:** Appears cheap, but is continuously destroying value.
+当问题涉及第 2 或第 3 项的实际机会成本，先执行 [06 第 9 节的 Longbridge 流程](06-valuation-capital.md)。不能用“指数长期回报”替代用户已有持仓的真实比较，也不能把账户读取失败藏起来。
 
-**The Most Common Characteristics of Value Traps:**
+### 控股企业不能直接类比证券持仓
 
-| Trap Type | Manifestation | How to Identify |
-|---------|-----|---------|
-| Structural industry decline | Revenue in persistent decline, no signs of recovery | Ask: Will this industry still exist in 10 years? |
-| Commodity-type business | No pricing power; prices set by the market | Ask: What happens if we raise prices by 5%? |
-| Poor management quality | Even with a decent business, capital allocation destroys value | Review historical capital allocation decisions |
-| Heavy assets, low returns | Requires continuously high investment to maintain mediocre returns | Is ROIC persistently below WACC? |
-| Accounting quality issues | Profits look high, but cash flow is poor | Is the cash conversion rate persistently low? |
+《股东手册》对控股企业的政策包含经营关系及承诺背景；1987 年信则讨论了上市证券的价格和替代用途。[B-OM](../SOURCES.md#b-om)、[B-1987](../SOURCES.md#b-1987)
 
-**Buffett's Textile Industry Lesson:**
-> "When a management with a reputation for brilliance tackles a business with a reputation for bad economics, it is the reputation of the business that remains intact."
-The textile industry's high asset intensity, lack of differentiation, and global competition made it a permanent value trap — no amount of good management could overcome it.
+项目判断应说明当前属于哪种情境，不把某项控股承诺解释成所有股票永远不能卖。
 
----
+## 4. 临时困难、结构恶化与原本判断错误
 
-## Leverage Risk
+| 类别 | 核心特征 | 需要的证据 |
+|---|---|---|
+| 临时困难 | 优势机制仍在，恢复条件可描述且成本可承受 | 客户行为、同行变化、订单/库存、恢复投入 |
+| 结构恶化 | 竞争、技术、监管或资本强度发生持续变化 | 新旧模式经济性、迁移、价格与份额变化 |
+| 原判断错误 | 原先就高估质量、增长或低估资本需求 | 对最初假设重新取证，而非只看新财报 |
+| 暂不能区分 | 关键证据矛盾或缺失 | 明确区间与研究计划，避免伪装确定 |
 
-> "Only when the tide goes out do you discover who's been swimming naked."
+时间长短不能独立区分临时与永久；一次变化可能影响十年，一段很长的低迷也可能是周期。经营恢复也不保证投资回报恢复，因为期间可能已经发生稀释、债务增加或买入过贵。
 
-**Why Buffett Is Extremely Cautious About Leverage:**
-- Economic cycles are inevitable; the timing of crises is unpredictable
-- Leverage amplifies gains in good times, amplifies losses in bad times, and threatens survival
-- A single liquidity crisis can destroy decades of accumulated wealth
+结构恶化不是“任何价格都不可投”的证明。需要重新选择有限寿命、收缩现金或资产回收框架，并确认这种策略在能力与约束范围内，而不是悄悄把失败的复利投资改名为清算投资。
 
-**Buffett's Core Argument: Asymmetry of Risk**
+## 5. 价值陷阱：问题在现金回收，不在行业标签
 
-> "To get something you don't need, you risk something you do need and truly have — that's just crazy. Over the years, our aversion to leverage has indeed dragged on our returns. But Charlie and I sleep well." — 2017 Letter
+常见陷阱是：顶峰利润被当成常态；维持性投入被当成可选增长；低估重组、关停或环境责任；账面资产无法变现；不受约束的管理层持续投入低回报项目；隐性负债与稀释侵蚀股东权益。
 
-> "A string of wonderful numbers multiplied by a single zero always equals zero. Don't count on being able to get rich twice." — 2022 Letter
+低增长、商品化、重资产或衰退只是需要研究的特征，不自动等同于陷阱。问题是**以当前价格能回收多少净现金、需要等多久、过程中可能发生什么损失**。
 
-The deeper meaning: if you use leverage to make money 99 times out of 100, but go bankrupt on the 100th, the previous 99 successes are meaningless — you never get another chance.
+**B｜历史教训。**1985 年纺织业务回顾提示，单个项目看似合理的投资，可能在行业竞争中无法转成股东回报。[B-1985](../SOURCES.md#b-1985)
 
-**Even When It Works Most of the Time, Don't Use It:**
+**P｜反向问题。**当研究结论仍然是便宜时，写清楚：市场可能看到了什么、自己怎样证明不是在低估资本消耗、价值靠什么实际到达股东。
 
-> "Many managers will disagree with this policy, arguing that large amounts of debt can enhance shareholder returns. And these more risk-tolerant CEOs are right most of the time." — 2018 Letter
+## 6. 风险的两层：企业与投资者
 
-The key phrase is "most of the time." Buffett's philosophy is to prepare for those few "exceptions" — the very moments that will utterly destroy those who use leverage.
+### 6.1 企业层面
 
-**Safe Leverage Parameters:**
-- Debt / EBITDA < 2x
-- Interest coverage ratio (EBIT / Interest) > 5x
-- Even so, the position must still pass the "worst-case scenario test"
+研究现金流永久损失、竞争、诚信、融资、法律责任、监管、操作事故、客户/供应商集中、资本承诺和复杂权益结构。
 
-**Worst-Case Scenario Test:** Assume revenue declines 30% and remains depressed for 2 years. Can the company:
-1. Repay maturing debt?
-2. Avoid dilutive financing?
-3. Keep the core business intact?
+不要把经营波动和永久损失混为一谈，也不要把“波动不是风险的全部”误写成“波动完全不重要”。金融契约、抵押品和融资依赖可以把价格波动转化为实际损失。
 
-**Leverage Effects Should Be Stripped Out When Evaluating Management Performance:**
+### 6.2 组合及个人层面（P）
 
-> "The primary test of managerial economic performance is the achievement of a high earnings rate on equity capital employed (without undue leverage, accounting gimmickry, etc.) and not the achievement of consistent gains in earnings per share." — 1979 Letter
+| 风险 | 需要检查 |
+|---|---|
+| 单点错误 | 某项判断错了，组合是否仍能继续投资和生活？ |
+| 隐性相关 | 不同行业标签是否共享同一技术、客户预算、利率或监管冲击？ |
+| 流动性 | 现金需求、市场深度、锁定期和资产变现时间是否匹配？ |
+| 融资与保证金 | 价格下降时需要补多少资金，谁有权要求提前偿还？ |
+| 未知外部暴露 | Longbridge 是否只覆盖部分财富，是否存在未披露的杠杆或义务？ |
+| 行为承受 | 仓位是否使投资者在不利报价中无法坚持经验证的计划？ |
 
-Many companies improve their return on equity by adding debt, which does not represent management's operating ability. True capability is achieving high returns under low leverage.
+不要用一个统一波动率、股票数量或仓位百分比宣称组合已经安全。没有足够个人信息时说明限制，不从账户余额推断全部家庭财务。
 
-**Berkshire's Leverage Philosophy:**
-- Always maintain a large cash reserve (typically >$20 billion)
-- This drags short-term returns, but guarantees offensive capability in a crisis
-- > "Never put yourself in a position where you are forced to sell good assets."
+## 7. 杠杆：关键是失去选择权的路径
 
-> "We rarely use much debt and, when we do, we attempt to structure it on a long-term fixed-rate basis. We would rather forfeit attractive opportunities than over-leverage our balance sheet." — 1983 Letter
+倍数只能提供线索。更重要的是债务期限、利率重定价、抵押品、契约、评级触发、担保、融资来源和真正可用的现金。经营利润恢复晚于债务到期，依然可能失去股权价值。
 
-**Berkshire's "Good Leverage" — Insurance Float:**
+本项目不使用“债务/EBITDA <2 倍”或“利息覆盖 >5 倍”作为自动安全判断。压力测试必须匹配行业，不统一设为收入下降 30% 两年。
 
-Berkshire actually employs a special form of "leverage," but it is fundamentally different from conventional leverage: it has no fixed maturity date (it cannot be called in), its cost is often below zero (due to underwriting profits), and the total amount grows over the long term. This allows Berkshire to enjoy the benefits of leverage without bearing the fatal risk of conventional leverage (being forced to repay debt at the worst possible moment).
+**融资来源也是风险。**已承诺额度可能有提款条件、契约限制或交易对手问题，不能把所有授信都当成现金。短期借款支持长期或不流动资产时，尤其要解释极端环境下的资金来源。
 
----
+### 浮存金不是无条件永久资本
 
-## The Impact of Inflation
+**B｜经济属性。**1997 年信强调浮存金是持有但不拥有的资金，价值取决于资金成本和其他融资成本的比较；准备金估计也可能出错。[B-1997](../SOURCES.md#b-1997)
 
-**Inflation Is a Hidden Tax:**
+**P｜风险应用。**可持续的业务可能形成稳定总量，但单个合同仍有赔付和结算义务。巨灾、业务收缩、准备金恶化或不同保险产品的退保特征，都可能改变现金需求。不能写成不能被索回、不会减少或没有偿付风险。
 
-> "High rates of inflation create a tax on capital that makes much corporate investment unwise — at least if measured by the criterion of a positive real return to owners. A situation that produces a 12% return on equity for a high-tax corporation, for example, will provide its owners with only about a 4% real return." — 1980 Letter
+## 8. 通胀：追踪真实购买力与资金需求
 
-The visible tax (income tax) is levied on nominal income, not real income. Therefore, when inflation is high, investors may earn money nominally but lose in purchasing power terms, while still owing income taxes on those "losses" — a double blow to investors.
+**B｜历史基础。**1981 年信讨论提价和少量新增资本需求对抵御通胀的重要性。[B-1981](../SOURCES.md#b-1981)
 
-**Inflation's Differentiated Impact on Different Businesses:**
+**P｜应用。**分别分析售价传导、成本调整时滞、营运资本、替换资本开支、税务与固定名义义务。资产轻不等于自动抗通胀，资产重也不等于一定受害；关键是现金产出相对必要投入怎样变化。
 
-**Protected Businesses (Good Businesses):**
-- Have pricing power; can pass costs on to customers
-- Asset-light; do not require large capital reinvestment to sustain operations
-- Examples: Coca-Cola, Gillette — branded consumer goods can raise prices with inflation
+债券或现金需要考虑购买力和期限，但不能只凭“可能通胀”就断言任何固定收益投资都差。价格、期限和投资者义务同样重要。
 
-> "The favored business must have two characteristics: (1) an ability to increase prices rather easily (even when product demand is flat and capacity is not fully utilized) without fear of significant loss of either market share or unit volume, and (2) an ability to accommodate large dollar volume increases in business (often produced more by inflation than by real growth) with only minor additional investment of capital." — 1981 Letter
+## 9. 衍生品：看合同、现金路径与相关尾部
 
-A classic example: See's Candies can raise prices every year without affecting sales, and does not require large capital investment to maintain capacity. The textile industry was the opposite — it required continuous capital investment to replace equipment and replenish inventory, yet could not pass costs on to buyers.
+**B｜警示与边界。**2002 年股东信讨论衍生品的估值、激励、对手方和连锁流动性风险，同时承认伯克希尔在某些投资策略中使用它们。[B-2002](../SOURCES.md#b-2002)
 
-**Businesses That Are Harmed (Bad Businesses):**
-- Capital-intensive industries: equipment depreciation is calculated at historical cost, but replacement cost rises with inflation
-- Commodity-type businesses with no pricing power: costs rise, prices set by the market
-- Service industries with a high labor component
+**P｜分析要求。**不要把所有衍生品一律定性，也不要把没有初始保证金的合同说成没有风险。检查：
 
-**Fixed-Income Investments Are Most Vulnerable to Inflation:**
+- 合约标的、期限、结算方式、最大或条件性损失；
+- 抵押、追加保证金、提前终止、评级及交叉违约条款；
+- 对手方、法律可执行性、净额结算和极端相关性；
+- 估值对参数的敏感性，以及账面收益何时才变成现金；
+- 在经营最困难时，合同会要求交出多少现金。
 
-> "Over the past century these instruments have destroyed the purchasing power of investors in many countries, even as the holders continued to receive timely payments of interest and principal. This ugly result, moreover, will forever recur. Governments determine the ultimate value of money, and systemic forces will sometimes cause them to gravitate to policies that produce inflation." — 2011 Letter
+名义金额不等于实际损失，净账面敞口也不等于极端现金需求。不能认为收取权利金就是免费浮存金，更不能保证某项结构不会产生系统性影响。
 
-> "Paper money can become worthless if fiscal behavior gets out of hand… Bonds payable in a given currency can be ruined by runaway inflation." — 2024 Letter
+复杂证券的具体定价须另用合适模型与合同资料；不得仅凭巴菲特的历史交易声誉提供仓位或执行建议。
 
-**Berkshire's Inflation-Resistance Is "Far From Perfect":**
+## 10. 常见行为偏差与纠偏
 
-> "Berkshire also can do something to resist the inflation that might someday get out of hand, but this property is far from perfect. Huge and entrenched fiscal deficits have consequences." — 2022 Letter
+| 偏差 | 典型表现 | 项目纠偏 |
+|---|---|---|
+| 确认偏差 | 只收集支持既有仓位的信息 | 写最强反方论点并寻找区分证据 |
+| 沉没成本 | 等回本再卖 | 用当前可部署资金和未来回报比较，但计入真实税费 |
+| 锚定 | 按成本价、历史高点或旧买点决定 | 重估今天的现金流与机会成本 |
+| 近因偏差 | 单季变化直接等同长期趋势 | 区分周期噪音与结构断点 |
+| 行动偏差 | 有现金就必须买，有新闻就必须动 | 要求明确行动收益与成本 |
+| 不行动偏差 | 把长期主义作为不纠错的借口 | 指明继续持有需要什么证据 |
+| 权威偏差 | 巴菲特买过，所以任何时候都好 | 核对价格、条款、时期和个人条件 |
+| 结果偏差 | 股价涨了证明分析正确 | 复盘当时证据和概率，而非只看终局 |
+| 过度保守 | 任意数值门槛阻止能力圈内机会 | 检查遗漏成本，但不追涨弥补懊悔 |
 
-**Investment Priorities in an Inflationary Era:**
-High ROIC + Asset-light + Pricing power → Most inflation-resistant
-Low ROIC + Heavy assets + No pricing power → Value eroded by inflation
+“假如没持仓是否会买”是有用问题，但不是唯一答案；已有持仓的税费和组合背景可能改变最优行动。
 
----
+## 11. 监测：把投资命题变成可检验事项
 
-## Derivatives Risk
+每个关键假设都应有观察指标、重要时间尺度和改变结论的证据。指标应直接连接经济机制，避免一长串没有行动含义的数据。
 
-> "Charlie and I are of one mind in how we feel about derivatives and the trading activities that go with them: We view them as time bombs, both for the parties that deal in them and the economic system." — 2002 Letter
+```text
+假设：
+支持与反证：
+待观察事实 / 数据来源：
+为什么会影响现金流或生存：
+哪些变化只是价格或短期噪音：
+达到什么证据状态需要重新估值或调整：
+上次复核日期 / 本次变化：
+```
 
-> "Derivatives are financial weapons of mass destruction, carrying dangers that, while now latent, are potentially lethal." — 2002 Letter
+不把“每季度检查”误认为可以等到下一季才处理重大事件。也不能因列了监测表就声称已建立后台监控；只有用户要求且实际创建了相应任务，才可说明存在持续提醒。
 
-**Why They Are Dangerous:**
-- Leverage is embedded in contract terms, making it difficult to transparently assess true exposure
-- Counterparty risk concentrates and erupts during a crisis
-- Mark-to-market accounting creates violent swings in reported profits and losses, distorting judgment
-- Complexity makes fraud and errors harder to detect
+## 12. 最终行动说明
 
-**The Accounting Problem of "Mark-to-Myth":**
-
-> "Contracts involving multiple reference items and distant settlement dates offer the most ample room for fanciful assumptions… In extreme cases, mark-to-model degenerates into what I would call mark-to-myth." — 2002 Letter
-
-The book value of derivatives is built on complex mathematical models, not real market prices. Traders — motivated by bonuses — and CEOs — motivated by stock prices — both have incentives to overstate book values. The truth often only emerges when the contracts are finally settled, potentially years or even decades later.
-
-**Systemic Domino Effects:**
-
-> "A participant may see himself as prudent, believing his large credit exposures are diversified and therefore not dangerous… Under certain circumstances, however, an exogenous event that causes the receivable from Company A to go bad will also affect those from companies B through Z. History teaches us that a crisis often causes problems to correlate in a manner undreamed of in more tranquil times." — 2002 Letter
-
-This passage almost perfectly predicted the 2008 financial crisis — AIG's credit default swap positions triggered a cascading collapse across the entire financial system.
-
-**Derivatives Are "Easy to Enter, Hard to Exit":**
-
-> "Like Hell, it's easy to enter and almost impossible to exit." — 2004 Letter
-
-The winding down of General Re Securities took years: 10 months after the decision to cease operations was made, 14,384 contracts were still outstanding involving 672 counterparties. This painful experience left Buffett with a deeply memorable lesson.
-
-**Derivatives Checklist When Analyzing a Company:**
-- Does the company have substantial off-balance-sheet derivatives exposure?
-- Is the net exposure clearly disclosed? Who are the counterparties?
-- If a counterparty runs into trouble, how severely is the company impacted?
-
-**Berkshire's Iron Rule:**
-
-> "We never will operate in a manner that requires us to suddenly need large sums of cash. That means we won't expose Berkshire to short-term debt maturities of size nor will we enter into derivative contracts or other business arrangements that could require large collateral calls." — 2014 Berkshire Past, Present and Future
-
-**Buffett's Selective Use:**
-Berkshire does use derivatives, but only when:
-- The risk can be clearly understood and priced
-- No margin calls are involved (not forced to close positions at the worst moment)
-- Large premiums are collected upfront (essentially receiving free float)
-- Positions will not trigger systemic risk
-
-> "We have long invested in derivatives contracts that Charlie and I think are mispriced, just as we try to invest in mispriced stocks and bonds." — 2009 Letter
-
----
-
-## Common Behavioral Biases (Psychological Traps in Investing)
-
-**1. Confirmation Bias**
-After buying, you only seek out information that supports your judgment and ignore contrary evidence.
-- Countermeasure: Actively seek evidence that can falsify your thesis; listen to people who hold the opposite view.
-
-**2. Sunk Cost Fallacy**
-Continuing to hold because the stock "has already fallen a lot" or because "I've already bought it."
-- Countermeasure: Ask yourself, "If I had no position today, would I buy at this price?"
-
-**3. Anchoring Effect**
-Using the purchase price, historical high, or some arbitrary number as a reference point for decisions.
-- Countermeasure: Focus only on the relationship between intrinsic value and the current price.
-
-**4. Recency Bias**
-Overweighting recent events and underweighting long-term trends.
-- Countermeasure: Think in a 10-year framework, not "the last few quarters."
-
-**5. Action Bias**
-Feeling like you "should do something," even when the best decision is to do nothing.
-- Buffett's answer: Inaction is also a conscious decision.
-
-> "We don't need to be smarter than everyone else. We just need to make fewer stupid mistakes than everyone else."
+持有或卖出结论应说明：现在依据什么持有、什么变了、价格是否补偿、账户比较是否完成、组合是否能承受，以及行动的约束。证据不足时允许不给买卖结论，但对已明确的生存风险应直说，不能以不确定性为由模糊重要问题。

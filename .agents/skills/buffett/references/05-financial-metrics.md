@@ -1,135 +1,229 @@
-# Financial Analysis and Key Metrics
+# 05｜财务指标、所有者盈余与每股经济价值
 
-> When to read this file: When you need to analyze financial statements, calculate owner earnings, assess ROIC/ROE quality, or understand the concept of look-through earnings.
+> **版本：2.0｜修订日期：2026-10-22**  
+> 适用：利润质量、所有者盈余、自由现金流、增长投入、资本回报、稀释与财务安全。  
+> 来源标记遵循 [SOURCES.md](../SOURCES.md)。公式的操作化、检查表与例子为 P，除非另有说明。
 
-## Core Principle: See Through Accounting to Economic Reality
+## 1. 先选口径，再算指标
 
-GAAP financial statements are the starting point, not the destination. Buffett always asks: **How much does this business truly earn?**
+财报是分析起点，不是最终的经济答案。先确认公司类型、报表准则、期间、币种、业务变化和普通股股东的权益范围；银行、保险不能照搬工业企业的 ROIC 或 CFO 减资本开支模型。
 
----
+每个重要数字应能追溯到原始财报或明确的分析调整。保留“报表值—调整—分析值”的桥接，调整项目要同时列正负两面，不只加回不利项。
 
-## Owner Earnings
+**正常化不是删除坏消息。**持续发生的重组、日常股权激励、正常信用损失、必要研发和经常性维护，不能因为名称是“一次性”或“非现金”就全部排除。历史均值也不能修复已经变化的行业结构。
 
-Buffett introduced this concept in his 1986 shareholder letter as the best tool for measuring a business's true earning power.
+## 2. 所有者盈余：先理解经济含义
 
-```
-Owner Earnings =
-  Net Income
-  + Depreciation, Depletion, and Amortization (D&A)
-  − Maintenance CapEx required to maintain competitive position
-  − Any required net increases in working capital
-```
+**B｜定义来源。**1986 年股东信的所有者盈余讨论，把报告收益、适当的非现金项目以及维持长期竞争地位和经营量所需的资本投入联系起来，并指出这种估计有不确定性。[B-1986](../SOURCES.md#b-1986)
 
-**Key Distinction — Two Types of Capital Expenditure:**
+### 2.1 维持性盈利能力口径（P）
 
-| Type | Nature | Treatment |
-|-----|-----|---------|
-| Maintenance CapEx | Must be spent or competitive position deteriorates | Must be deducted from owner earnings |
-| Growth CapEx | Optional, used to expand new capacity | Not deducted (this portion generates future returns) |
+对适用的非金融企业，可用下式作分析起点，而不是不加辨别地抓取报表字段：
 
-**Why It Is More Reliable Than EBITDA:**
-EBITDA adds back depreciation, implicitly assuming assets do not wear out. But assets do age, and maintaining operations requires real cash outlays.
-
-**Methods for Estimating Maintenance CapEx:**
-- Management sometimes discloses it
-- Approximation: Depreciation × industry rule-of-thumb multiplier (close to 1:1 for asset-light businesses, potentially higher for capital-intensive ones)
-- Compare against industry peers
-
----
-
-## Key Financial Metrics
-
-### Profitability
-
-**ROE (Return on Equity)**
-```
-ROE = Net Income / Average Shareholders' Equity
-```
-- Buffett's standard: 10-year average >15%, with no excessive leverage
-- Must decompose the source: margin expansion / asset turnover improvement / financial leverage increase
-- ROE inflated by leverage is a trap, not an advantage
-
-**ROIC (Return on Invested Capital)**
-```
-ROIC = NOPAT (Net Operating Profit After Tax) / Invested Capital (Equity + Interest-Bearing Debt − Cash)
-```
-- More honest than ROE; removes the distortion of capital structure
-- Sustained >15% is excellent; >20% is exceptional
-- **Value creation condition: ROIC > WACC (Weighted Average Cost of Capital)**
-
-### Cash Flow Quality
-
-**Cash Conversion Ratio**
-```
-Cash Conversion Ratio = Operating Cash Flow / Net Income
-```
-- Sustained >90%: High earnings quality, not reliant on accounting techniques
-- Persistently <70%: Requires deep investigation (may indicate inflated receivables or aggressive revenue recognition)
-
-**Free Cash Flow (FCF)**
-```
-FCF = Operating Cash Flow − Capital Expenditures (total)
-```
-Note: This includes growth CapEx, making it more appropriate for asset-light companies.
-For high-CapEx companies in growth phases, the owner earnings lens is fairer.
-
-### Balance Sheet Health
-
-**Debt Safety:**
-- Debt / EBITDA < 2x: Comfortable range
-- Interest Coverage Ratio (EBIT / Interest Expense) > 5x: Sufficient buffer
-
-**Worst-Case Scenario Test (mandatory):**
-Assume revenue falls 30% — can the company:
-1. Repay maturing debt?
-2. Sustain core business operations?
-3. Avoid dilutive financing?
-
-### Earnings Quality Signals
-
-**Red Flag Checklist (investigate further if any appear):**
-- [ ] Accounts receivable growth persistently exceeds revenue growth
-- [ ] Inventory growth persistently exceeds revenue growth
-- [ ] Operating cash flow persistently below net income
-- [ ] Frequent use of "adjusted earnings" with large divergences from GAAP
-- [ ] Large goodwill balances from high-premium acquisitions with mediocre returns
-- [ ] Frequent related-party transactions with non-transparent terms
-- [ ] Auditor changes, or audit opinions with qualifications
-- [ ] Management selling large amounts of shares
-
----
-
-## Look-Through Earnings
-
-Applicable to: **analyzing holding companies, investment holding companies, or businesses with substantial equity stakes not consolidated on the balance sheet**
-
-An original concept Buffett first proposed in 1989 and first systematically calculated in 1990, addressing a major deficiency in GAAP's ability to reflect the true earning power of investee companies.
-
-**Complete Calculation Formula:**
-```
-Look-Through Earnings =
-  Berkshire's reported operating earnings (excluding capital gains and non-recurring items)
-  + Berkshire's proportionate share of retained earnings from major investees
-  − Estimated income taxes that would be owed if those retained earnings were distributed to Berkshire as dividends
+```text
+维持性所有者盈余（OE_maint）
+= 正常化的普通股股东净收益
++ 经济上合理的折旧、摊销及其他非现金调整
+- 维持竞争地位与正常经营量所需资本支出
+- 相应所需的营运资本净增加
+± 尚未反映的现金税费、准备金等经济调整
 ```
 
-**Actual Calculation Example from 1990 (Buffett's own words):**
-> "Take $250 million, which is approximately our share of the 1990 retained operating earnings of our investees; subtract $30 million, for the incremental taxes we would have owed had that $250 million been paid to us as dividends; and add the remainder, $220 million, to our reported operating earnings of $371 million. Thus, our 1990 'look-through earnings' were about $590 million." — 1990 Buffett Letter to Shareholders
+其中“其他非现金调整”不表示所有非现金费用都可以加回。净收益的起点、少数股东、优先股及利息口径必须一致。这个指标回答的是**维持型经营能力**，不自动等于增长情景下可以分配的现金。
 
-**Why It Matters:**
-GAAP only allows recognition of dividends received when ownership is below 20%, causing retained earnings to disappear from the books. The Cap Cities/ABC example: in 1990, Berkshire's proportionate earnings exceeded $82 million, but only about $530,000 appeared on the GAAP books (dividends net of taxes). GAAP severely understates true earning power.
+### 2.2 实际预测必须扣除产生预测增长所需的投入
 
-**The Link Between Look-Through Earnings and Intrinsic Value Growth:**
-> "For Berkshire's intrinsic value to grow at an average of 15% per year, our look-through earnings must also grow at approximately the same rate." — 1989 Buffett Letter to Shareholders
+```text
+在与 OE_maint 口径一致、没有重复计算的前提下：
+增长情景的融资前股东现金
+= 当期维持性所有者盈余
+- 尚未计入的增长性资本支出
+- 尚未计入的增长性营运资本投入
+- 其他尚未计入、实现预测所必需的现金投入
+```
 
-**Why Retained Earnings Are Sometimes More Valuable Than Dividends:**
-> "You must judge whether these undistributed earnings are as valuable to you as those already reported. We believe they are — and, in fact, may even be more valuable. The reason for this 'bird-in-the-bush-may-be-worth-two-in-the-hand' conclusion is that our investees are employing their retained earnings under the direction of managers who are talented and shareholder-oriented, and who sometimes find uses for capital within their own businesses that are superior to anything we could find for it." — 1989 Buffett Letter to Shareholders
+这里的“融资前”仅指尚未加减新增借款、偿还本金等融资现金变化；起点净收益已经包含利息，因此该口径不是 FCFF。
 
-**The Flaw of GAAP's "20% Threshold":**
-Buffett criticized this arbitrary threshold as early as 1982: "The value of retained earnings to all shareholders depends on the efficiency with which they are deployed, not on the size of your ownership stake."
+已经计入利润的研发、营销、人力等费用不能再重复扣除；也不能为了提高所有者盈余而随意加回，再保留其带来的增长。
 
-**Practical History:** Calculated and publicly reported for 8 consecutive years from 1990 to 1997; suspended in 1998 following the General Re acquisition; since 2018, replaced by a disclosure comparing investee dividends received versus retained earnings, carrying on the same spirit.
+**B｜原始问答支持。**1998 年股东大会的相关问答强调，投入业务的资金不能同时被当成可提取的毛现金流；应看投入之后留下的净现金。[A-1998-PM](../SOURCES.md#a-1998-pm)
 
-> "While no single figure captures everything perfectly, we believe look-through earnings more accurately reflect Berkshire's true earning power than the GAAP number." — 1992 Buffett Letter to Shareholders
+### 2.3 数学示例：100 不等于 100 加免费增长
 
-**This framework must be used when analyzing Berkshire, and should be considered when analyzing any company that holds substantial non-controlling equity interests.**
+以下完全是假设，不是某家公司的数据：
+
+| 项目 | 金额 |
+|---|---:|
+| 正常化普通股净收益 | 100 |
+| 合理加回的折旧 | 20 |
+| 维持性资本支出 | -20 |
+| 维持型营运资本变化 | 0 |
+| 维持性所有者盈余 | **100** |
+| 为实现预测增长新增的资本投入 | -40 |
+| 假定没有其他变化时的融资前股东现金 | **60** |
+
+估值可以选择不投入 40 的维持/低增长路径，也可以选择投入 40 的增长路径。不能在同一路径中既分配 100，又取得本应靠那 40 才能实现的全部增长。
+
+## 3. 维持性与增长性支出的边界要靠证据
+
+判断标准不是管理层给的名称，而是取消支出后会发生什么。为了保住现有客户、合规、产能、产品竞争力或正常服务而不得不花的钱，不能仅因带来技术升级就统统归为可选增长投入。
+
+| 证据 | 用途 | 局限 |
+|---|---|---|
+| 管理层披露的支出分类 | 提供起点及项目说明 | 可能有美化自由现金流的激励 |
+| 资产年龄、寿命与替换成本 | 判断维持需求和通胀影响 | 历史账面成本未必反映未来替换价格 |
+| 产能、门店、客户量与支出的联动 | 区分扩张与维护 | 产能升级常混合两种目的 |
+| 经营稳定期的多年度现金流 | 检验长期可持续性 | 稳定期不一定代表未来结构 |
+| 同业、工程和实际项目资料 | 交叉验证 | 需要校正商业模式、资产年龄和质量差异 |
+
+不能默认维持性资本支出等于折旧，或用固定“折旧乘行业系数”伪装精确。无法拆分时，用总资本开支口径和维持需求的合理区间并列估值；让不确定性显式影响结论。
+
+## 4. 自由现金流与企业价值/股权价值要匹配
+
+### 4.1 两个常用框架（P）
+
+```text
+FCFF（全体资金提供者现金流）
+= NOPAT
++ 适当的非现金经营费用调整
+- 总经营性资本支出
+- 经营性营运资本净增加
+- 其他尚未计入的必要经营现金投入
+
+FCFE（普通股股东现金流）
+= 归属于普通股的净收益
++ 适当的非现金调整
+- 总资本支出
+- 经营性营运资本净增加
++ 新增借款 - 偿还借款
+- 其他尚未计入、优先于普通股的必要现金要求
+```
+
+这是分析框架，实际报表映射需要处理租赁、养老金、重组、现金税费与少数股东等。各项只计算一次。净借款不是经营创造的收益，不能无限外推借债分红来抬高价值。
+
+```text
+经营企业价值 = FCFF 的适当现值
+普通股价值 = 经营企业价值
+             + 未在经营现金流计价的非经营资产
+             - 有息债务及其他尚未扣除的优先请求权
+
+或：以适当口径直接折现 FCFE 得到股权价值。
+```
+
+用 FCFE 已处理负债偿付后，不能又机械扣同一笔全部净债务；用 FCFF 得到企业价值后，也不能直接除以股数当作普通股价值。
+
+### 4.2 CFO 减总资本开支不是“只适合轻资产”
+
+`CFO - 总资本开支` 是常用自由现金流观察值，但是否等于可分配给普通股的现金，取决于利息、租赁、并购、融资和报表分类。它对资本密集企业同样重要，正因为它显示了增长与维护占用了多少资金。
+
+允许另看维持性所有者盈余来理解经营能力，但不能用后者掩盖实际现金缺口。
+
+### 4.3 防止重复计算
+
+- CFO 通常已经包含营运资本变化；从 CFO 出发时不要再机械减一次同样的变化。
+- 从扣除折旧后的利润出发，适当加回折旧再扣实际资本投入；不能既保留全部折旧费用又全额重复扣同类资本耗用而不解释。
+- 租赁负债与租金/租赁现金支出的处理应匹配：不能扣了全部现金租金，又把同一义务作为额外债务完整重复扣值。
+- 现金应区分经营必需、受限、抵押、监管留存与真正剩余现金；不是账上现金都能分给股东。
+- 现金或投资资产单独加值时，应剔除已经在经营收益中资本化的相应投资回报，避免双算。
+
+## 5. 股权薪酬、回购与稀释
+
+**B｜经济成本。**2002 年信对不把股票期权作为费用的会计处理提出批评；非现金不等于对所有者没有成本。[B-2002](../SOURCES.md#b-2002)
+
+### 5.1 选择一致方法，不把劳动成本抹掉（P）
+
+**经济成本法：**从包含合理股权薪酬经济成本的收益出发，不把该费用作为免费现金加回。说明未来持续授予如何处理，以及现有期权、限制性股票等未结清请求权如何进入每股价值。
+
+**显式权益法：**从实际现金流出发，把持续授予、行权资金、未来股数和权益分配逐期建模。只使用当前稀释股数，通常不足以覆盖未来不断授予的稀释。
+
+两种方法都需要校验同一批权益授予是否被重复扣除：不能既全额扣等价经济费用，又对同一未来授予再全额扣一次稀释代价；也不能两边都不扣。不同批次的已授予权利与未来服务成本应分别说明。
+
+### 5.2 净股数桥接
+
+```text
+期末普通股数
+= 期初普通股数
++ 股权薪酬、行权及其他发行
++ 股份支付收购等增发
+- 实际回购注销或库存股影响
+± 拆股等口径调整
+```
+
+区分期末股数、加权平均基本股数、稀释股数与经济上尚未结清的权利。不能用“回购额很大”推定净稀释减少，也不能将 EPS 上升全部归因于经营改善。
+
+## 6. ROE、ROIC 与增量回报
+
+### 6.1 ROE（P）
+
+```text
+ROE = 归属于普通股的净收益 / 平均普通股权益
+```
+
+检查利润率、资产周转、杠杆、回购和减值对分子和分母的影响。权益极低或为负时，ROE 可能没有通常的经济解释。取消统一“十年平均超过 15%”标准。
+
+### 6.2 ROIC（P）
+
+```text
+ROIC = 正常化 NOPAT / 平均投入经营资本
+```
+
+投入资本的一种融资侧近似是“权益 + 相关有息负债 - 真正非经营/剩余现金及非经营资产”，但必须与 NOPAT 的业务范围、租赁和调整口径一致。不能简单减去全部现金。
+
+ROIC 能帮助区分经营回报与融资影响，但不是天然比所有其他指标更真实。轻资产费用化、历史成本、并购商誉、资产减值和业务组合都会改变其解释。
+
+涉及研发资本化等分析调整时，应同时调整当期收益、摊销和资本基数；标明这是项目分析模型，不是报表事实。
+
+### 6.3 存量回报不等于新增资本回报
+
+```text
+增量资本回报的粗略观察 = 一段时期正常化经营收益的变化 / 相应投入资本的变化
+```
+
+需处理项目投产时滞、周期、并购、价格上涨和资产处置。资本增量很小、为负或口径不连续时，不输出失真的精确百分比。
+
+增长创造价值的关键是**新增投入获得足够回报**。WACC 可以作为现代财务工具中的参照，但不能宣称巴菲特采用固定 WACC 算法；估计本身也有不确定性，并应联系实际机会成本。
+
+### 6.4 收购前后的两套回报
+
+看业务本身，可以研究净经营资产和经济商誉；评价收购管理者，要包含支付的全部成本。先发生巨额减值、后用缩小的资本基数展示高回报，不应被误认为资本配置已成功。
+
+## 7. 现金转换与利润质量
+
+`经营现金流 / 净利润` 可作为观察指标，但不是跨行业的质量评分。净利润接近零或为负时，该比率往往失去解释力。应看多期累计与具体桥接，不设统一 90%/70% 门槛。
+
+| 现象 | 应进一步研究 |
+|---|---|
+| 应收增长快于收入 | 账期、客户质量、收入确认、并购与汇率影响 |
+| 库存增长快于销售 | 备货、原料涨价、滞销、产品切换与减值 |
+| CFO 异常强 | 预收增加、延迟付款、保理、供应链融资、暂时去库存 |
+| 调整后利润长期高于报表利润 | 被排除项目是否经常发生，是否代表真实经济成本 |
+| 高利润但低现金 | 增长投入、现金税款、客户回款或会计质量 |
+| 高回购但股数未降 | 股权薪酬、收购增发、执行时点及统计口径 |
+
+红旗是调查起点，不是定罪。应明确哪种解释已被证据支持，哪种仍是风险假设。
+
+## 8. 穿透收益：经济理解工具，不是额外可加一次的资产
+
+**B｜历史基础。**1990 年股东信对穿透收益作出计算，旨在把重要被投资企业未分配的收益纳入经济观察。[B-1990](../SOURCES.md#b-1990)
+
+**P｜使用方式。**先核对投资的会计处理，再在避免重复的前提下分析：已经反映的经营收益、应占被投资企业留存的经济收益，以及在适当假设下的相关税务影响。留存收益是否创造价值，还取决于被投资者如何配置。
+
+不能机械沿用“持股不足 20% 的收益永远只通过股息入账”的说法。应根据适用准则及具体权益性质检查；2018 年股东信也专门讨论了权益证券未实现损益进入净利润造成的波动。[B-2018](../SOURCES.md#b-2018)
+
+**估值禁忌：**如果投资资产已按市值或独立内在价值加进分部估值，就不能再把同一资产的全部穿透收益资本化后再加一次。穿透收益是解释工具，不是凭空多出一层价值。
+
+## 9. 资产负债表：看债务到期与可用现金，不只看倍数
+
+负债/EBITDA、利息覆盖率可以提示问题，但不设“低于 2 倍就安全”“超过 5 倍就通过”的通用规则。银行存款、保险负债、租赁和普通公司借款不是同一种经济义务。
+
+建立时间表：现金及受限现金、到期本金、利息重定价、可用授信及条件、资本承诺、养老金与担保、潜在诉讼或赔付、抵押与评级触发条款。
+
+**压力测试应行业适配：**对周期制造业看需求与固定成本；对银行看存款外流、信用与资产变现；对保险看巨灾、准备金与投资损失；对公用事业看监管回收、项目超支和责任风险。统一收入下滑 30% 不能替代这些测试。
+
+区分“恶劣但可界定情景”与真正未知的极端风险。不得把模型最差一栏命名为已经覆盖所有可能性的最坏情况。
+
+## 10. 财务分析输出清单（P）
+
+应能交付：数据与口径、正常化调整表、利润至现金桥接、维持/增长投入的证据、稀释与股数桥接、资本回报的来源、可用现金和到期义务、压力情景，以及这些内容如何改变估值。
+
+数据不足时保留区间和未知；不能因为模板有位置就补上未经支持的维持性资本支出、增量 ROIC 或所有者盈余。

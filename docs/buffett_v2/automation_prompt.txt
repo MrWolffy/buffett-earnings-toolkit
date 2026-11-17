@@ -1,0 +1,31 @@
+在本地 buffett-earnings-toolkit 项目运行独立 Buffett v2 日常财报监测。完整阅读 docs/buffett_v2/README.md、SUBAGENT_INSTRUCTIONS.md、PARENT_INSTRUCTIONS.md 和 MIGRATION.md，使用 src.tools.buffett_v2_pipeline 的 universe、context、prepare、apply-entry、validate、publish、status 入口。当前契约 buffett-research-v2.5，政策 buffett-valuation-6，父层 policy_id=parent-assumption-tolerance-2026-11-v3。所有输入、中间材料、缓存和报告写 outputs/buffett_v2；旧 outputs/buffett 只由 legacy_tickers 读取 ticker。不得导入旧估值、评分、买区、成功标志或事件完成状态，不运行旧 daily-monitor、buffett_subagent_artifacts 或 Batch/Responses/Agents API。
+
+先 universe 建全范围去重监测集合，context 获取真实 cutoff/纽约 as_of。在独立 inbox/<本轮唯一ID>/ 写一手已发布财报 events 和全范围 checks，未确认/缺源/到期未核实记 incomplete。prepare --mode daily_earnings --cutoff <context cutoff> 建轮；首次 --since=context.initial_scan_from（默认扫描过去7天实际财报），后续沿用新版逐公司水位，不重置。仅派发 plan.selected：本纽约日新财报，或既有 research_authorized=true 的获授权事件及 failed/running 恢复事件。较早启动积压保留 deferred_earnings/pending，不自动扩展历史研究。已完成事件继续去重；schema/policy变化、旧格式、空评分和价格提醒不触发研究。禁止用 manual 绕过范围。
+
+授权父会话使用原生 Codex subagent，每个 selected 公司一个，继承任务模型，按可用槽位分波。每个子代理读本轮 frozen/SUBAGENT_INSTRUCTIONS.md、schema、policy及框架，只写 companies/<ticker>。先独立研究再结构化，交付 research.json/research_report.md/metadata.json。估计 central/conservative/adverse/floor 四条经济情景，完整计入现金、资本、税、SBC、股份及优先权；同币种、同经济股权、同 discount_rate_id。逐情景列假设变化、依据、允许错误和生存评估。不得靠更换折现率、统一折扣、插值或把旧 P8/P10/P12/P15 改名产生四锚。可复用重新核验的一手事实，不能直接给旧情景换标签。
+
+子代理 entry_policy=pending_parent，policy_id=null，boundaries/tiers为空，gates=null；禁止自行映射 watch/research/starter/add/fat_pitch 或写父层决定。一般未知、mixed、无评分不能成为拒绝合理估计的理由。子代理与父层共同补证并完成四锚；真正无法可靠识别 floor 才明确 floor_limitation，不伪造零、不以缺失冒充完成精确分档。未知事实不能编造。
+
+父层读冻结 PARENT_INSTRUCTIONS.md，独立核查四锚：central为证据最支持的正常经济；conservative容纳多项普通小误差。adverse仅为单一核心论点显著失败，或最多两项直接因果相连的假设失败（ONE important investment thesis materially wrong / at most TWO directly causally linked thesis assumptions failing together）；独立驱动维持conservative假设，禁止叠加无关诉讼、税务、融资、宏观和资本冲击，除非是失败的直接传导机制且有证据。父层必须退回/修订多因素灾难包，保留普通股生存与全成本要求。
+
+V_floor保留floor标签，指当前可行企业的持续经营经济底部（GOING-CONCERN ECONOMIC FLOOR）：无增长价值、无质量/倍数溢价、无未证实新项目，低位但有证据支持的正常化经营，计足维持投入、SBC、税、营运资本、融资及所有索偿；不得因floor标签自动摧毁现有客户、特许经营或资产。仅有结构性衰退/有限寿命证据可用有限期/run-off floor。参照JBSS/EVRG/ED/GMED式受损但持续经营语义，不照搬数字；拒绝EXPE/FICO/APP式坍塌叠加仅因floor标签当作底部。清算/退出/回收另记risk_ledger/cross_checks为recovery reference，不是V_floor，也不自动构成同前提反证，不添加第五条边界。零floor仅限有据低位持续经营普通股经济价值实际≤0，或有限期/run-off优先索偿后无普通股回收；对可行持续经营企业，仅清算价值为零不足以推出零floor。floor不是保证股价底。
+
+写绑定 research.json 哈希的 parent_entry_decision.json，选择四 anchor_scenarios 与逐锚依据，并定义五档条件、evidence_cap、survival_cap、thesis_break和六项胖球事实检查。运行 apply-entry，再真实复核来源/cutoff、算术、现金桥、风险重复、准备及终值、独立交叉验证、四锚经济含义、证据/生存闸门，写 parent_review 后 validate。不得批量自动填写 passed=true。
+
+五个经济价格区间：
+P>V_central：watch，仅观望。
+V_conservative<P≤V_central：research，认真研究/最多极小仓。
+V_adverse<P≤V_conservative：starter，开始建仓。
+V_floor<P≤V_adverse：add，明显加仓。
+P≤V_floor：fat_pitch，Buffett式胖球候选。
+要求 V_central≥V_conservative≥V_adverse≥V_floor≥0；允许等值和空区间，分类用未舍入值，等号归较低价格侧。利率敏感性只作稳健性检查。floor=0时正价格不属于胖球；floor缺失且P≤adverse时经济档位不确定，明确classification_status，不制造第五条边界。
+
+经济价格档位与行动许可分开输出 economic_tier、evidence_cap、survival_cap、actionable_tier、thesis_break。actionable_tier取经济档位及两事实cap的最低档；thesis_break=research_cap时最多research，reject时为空。胖球逐项核验floor_independent、no_specific_equity_destroying_tail、financing_viable、no_major_dilution、capital_distributable、cross_check_resolved。no_specific_equity_destroying_tail仅在具体可信未解决的法律/监管/经营/权属尾部可能摧毁普通股或推翻floor，且无法合理界定/吸收时失败；一般未知、没有数学最大损失不失败，预算不等于法律赔偿上限。严重尾部、financing_viable或no_major_dilution失败须survival_cap≤research（或thesis_break/reject）；仅capital_distributable失败则survival_cap≤add，可取add，不据此强制research；全通过允许fat_pitch，再受证据限制。六项须全通过才允许无约束fat_pitch，任一失败至少一个cap≤add（或逻辑破坏覆盖）；不因普通证据缺口强制research，不设数值严重性评分。不能因普通未知、无评分或业务mixed令检查失败或机械压低cap。保留权属/欺诈等永久损失否决，低价不能抵消。actionable_tier仅条件研究档位，布尔actionable始终false，无交易。
+
+逐公司分波继续处理完整 selected；失败保留现场，明确 pending/failed，不把有限样本当全量完成。仅刷新当前契约已验收公司与本轮成功公司的真实行情；旧不兼容 v2.1/v2.2/v2.3/v2.4 只归档，不进入quotes、新signals或新报告。给出完整 outcomes、真实 quote_review 后调用 publish 原子切换 current.json。不得手写生产CSV/state；行情覆盖不足、文件占用或竞争发布不能称成功。新财报未完成时停用旧价格参考。
+
+保留既有监测水位、事件完成、旧历史报告和较早待办；migration_status单独记录待升级，不自动历史迁移。最后读取 status 和当前报告，汇总当前契约公司数、本轮完成/失败/待办、日历缺口、行情覆盖、经济档位和证据允许档位。手动报告与daily指针分离。不改变本任务的计划时间、暂停/启用状态、模型或其他自动化。
+
+跨日补充：上次成功检查水位之后首次核验的新财报，属于正常新增事件，即使纽约日期已变化仍可派发；仅较早已保存的未授权启动积压继续待办，避免漏掉两次定时检查之间的晚间发布。
+
+父层必须填写gates.floor_cross_check_resolution（status/reason/source_ids）；cross_check_resolved允许以来源和实质理由解决不同经济状态/权利差异，例如清算vs可行持续经营，可保持原V_floor。同前提较低独立估计未解释须unresolved、cross_check_resolved=false并禁止胖球。floor_independent另须独立支持持续经营floor前提（或有据有限期floor），可行企业清算证据单独不足。cross_checks可选premise=same_as_scenario/different_state_or_right，省略声明同前提；清算vs持续经营须标different_state_or_right并用explanation/risk_ledger说明来源和差异，不计入floor_independent支持。不能仅说前提不同便忽略真实生存失败，不能机械平均。

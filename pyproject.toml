@@ -1,19 +1,30 @@
 [project]
 name = "buffett-earnings-toolkit"
-version = "0.1.0"
-description = "Buffett-style company analysis and earnings-calendar monitoring tools."
+version = "0.2.0"
+description = "Evidence-based Buffett v2.5 research with native Codex subagents and earnings monitoring."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "claude-agent-sdk>=0.0.25",
-    "httpx>=0.27.0",
     "pandas>=2.1.0",
-    "python-dotenv>=1.0.0",
     "yfinance>=0.2.54",
+    "tzdata>=2024.1; sys_platform == 'win32'",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=7.4.0"]
+legacy = [
+    "claude-agent-sdk>=0.0.25",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

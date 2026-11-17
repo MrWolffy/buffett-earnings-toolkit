@@ -1,0 +1,960 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "business_quality": {
+      "enum": [
+        "good",
+        "mixed",
+        "poor",
+        "unknown"
+      ],
+      "type": "string"
+    },
+    "business_summary": {
+      "type": "string"
+    },
+    "cash_flow_bridge": {
+      "type": "string"
+    },
+    "cross_checks": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "explanation": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "premise": {
+            "enum": [
+              "same_as_scenario",
+              "different_state_or_right"
+            ],
+            "type": "string"
+          },
+          "scenario_id": {
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "available",
+              "unavailable"
+            ],
+            "type": "string"
+          },
+          "value_per_share": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "scenario_id",
+          "method",
+          "status",
+          "value_per_share",
+          "explanation",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "entry_conditions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "entry_policy": {
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "type": "string"
+        },
+        "boundaries": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "basis": {
+                "type": "string"
+              },
+              "id": {
+                "enum": [
+                  "V_central",
+                  "V_conservative",
+                  "V_adverse",
+                  "V_floor"
+                ],
+                "type": "string"
+              },
+              "price": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "rate_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scenario_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "available",
+                  "unavailable"
+                ],
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "price",
+              "scenario_id",
+              "rate_id",
+              "status",
+              "basis"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "defined_by": {
+          "enum": [
+            "unassigned",
+            "parent"
+          ],
+          "type": "string"
+        },
+        "gates": {
+          "additionalProperties": false,
+          "properties": {
+            "evidence_cap": {
+              "enum": [
+                "watch",
+                "research",
+                "starter",
+                "add",
+                "fat_pitch"
+              ],
+              "type": "string"
+            },
+            "evidence_reason": {
+              "type": "string"
+            },
+            "fat_pitch_checks": {
+              "additionalProperties": false,
+              "properties": {
+                "capital_distributable": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "passed": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "passed",
+                    "reason"
+                  ],
+                  "type": "object"
+                },
+                "cross_check_resolved": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "passed": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "passed",
+                    "reason"
+                  ],
+                  "type": "object"
+                },
+                "financing_viable": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "passed": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "passed",
+                    "reason"
+                  ],
+                  "type": "object"
+                },
+                "floor_independent": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "passed": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "passed",
+                    "reason"
+                  ],
+                  "type": "object"
+                },
+                "no_major_dilution": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "passed": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "passed",
+                    "reason"
+                  ],
+                  "type": "object"
+                },
+                "no_specific_equity_destroying_tail": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "passed": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "passed",
+                    "reason"
+                  ],
+                  "type": "object"
+                }
+              },
+              "required": [
+                "floor_independent",
+                "no_specific_equity_destroying_tail",
+                "financing_viable",
+                "no_major_dilution",
+                "capital_distributable",
+                "cross_check_resolved"
+              ],
+              "type": "object"
+            },
+            "floor_cross_check_resolution": {
+              "additionalProperties": false,
+              "properties": {
+                "reason": {
+                  "type": "string"
+                },
+                "source_ids": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "status": {
+                  "enum": [
+                    "not_needed",
+                    "resolved",
+                    "unresolved"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status",
+                "reason",
+                "source_ids"
+              ],
+              "type": "object"
+            },
+            "survival_cap": {
+              "enum": [
+                "watch",
+                "research",
+                "starter",
+                "add",
+                "fat_pitch"
+              ],
+              "type": "string"
+            },
+            "survival_reason": {
+              "type": "string"
+            },
+            "thesis_break": {
+              "enum": [
+                "none",
+                "research_cap",
+                "reject"
+              ],
+              "type": "string"
+            },
+            "thesis_break_reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "evidence_cap",
+            "evidence_reason",
+            "survival_cap",
+            "survival_reason",
+            "thesis_break",
+            "thesis_break_reason",
+            "floor_cross_check_resolution",
+            "fat_pitch_checks"
+          ],
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "policy_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "pending_parent",
+            "adopted"
+          ],
+          "type": "string"
+        },
+        "tiers": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "basis": {
+                "type": "string"
+              },
+              "conditions": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "label": {
+                "type": "string"
+              },
+              "lower_boundary": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "lower_inclusive": {
+                "type": "boolean"
+              },
+              "tier": {
+                "enum": [
+                  "watch",
+                  "research",
+                  "starter",
+                  "add",
+                  "fat_pitch"
+                ],
+                "type": "string"
+              },
+              "upper_boundary": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "upper_inclusive": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "tier",
+              "label",
+              "lower_boundary",
+              "upper_boundary",
+              "lower_inclusive",
+              "upper_inclusive",
+              "conditions",
+              "basis"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "policy_id",
+        "defined_by",
+        "basis",
+        "gates",
+        "boundaries",
+        "tiers"
+      ],
+      "type": "object"
+    },
+    "floor_limitation": {
+      "type": "string"
+    },
+    "information_cutoff": {
+      "type": "string"
+    },
+    "invalidation_triggers": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "missing_evidence": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "moat_assessment": {
+      "type": "string"
+    },
+    "opportunity_cost_status": {
+      "enum": [
+        "not_required"
+      ],
+      "type": "string"
+    },
+    "quality_assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "type": "string"
+        },
+        "dimensions": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "maximum": {
+                "type": "number"
+              },
+              "name": {
+                "type": "string"
+              },
+              "rationale": {
+                "type": "string"
+              },
+              "score": {
+                "type": "number"
+              },
+              "source_ids": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "name",
+              "score",
+              "maximum",
+              "rationale",
+              "source_ids"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "rubric_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "rubric_id",
+        "confidence",
+        "dimensions"
+      ],
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "quality_score": {
+      "maximum": 100,
+      "minimum": 0,
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "rates": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "basis": {
+            "type": "string"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "horizon_years": {
+            "type": "number"
+          },
+          "id": {
+            "type": "string"
+          },
+          "role": {
+            "enum": [
+              "reference",
+              "model_discount",
+              "entry_sensitivity",
+              "investor_required_return"
+            ],
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "source_kind": {
+            "enum": [
+              "market_evidence",
+              "analyst_assumption",
+              "project_policy",
+              "user_policy"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "value",
+          "currency",
+          "horizon_years",
+          "basis",
+          "source_kind",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "research_status": {
+      "enum": [
+        "assessed",
+        "conditional",
+        "insufficient_evidence"
+      ],
+      "type": "string"
+    },
+    "reserves": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "basis": {
+            "type": "string"
+          },
+          "consumed": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "operating",
+              "regulatory",
+              "contingent"
+            ],
+            "type": "string"
+          },
+          "release_condition": {
+            "type": "string"
+          },
+          "released": {
+            "type": "number"
+          },
+          "scenario_id": {
+            "type": "string"
+          },
+          "terminal_balance": {
+            "type": "number"
+          },
+          "terminal_treatment": {
+            "enum": [
+              "included_in_operating_value",
+              "added_separately",
+              "excluded_with_reason"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "scenario_id",
+          "kind",
+          "currency",
+          "amount",
+          "consumed",
+          "released",
+          "terminal_balance",
+          "release_condition",
+          "terminal_treatment",
+          "basis"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "return_sensitivity": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "price_per_share": {
+            "type": "number"
+          },
+          "rate_id": {
+            "type": "string"
+          },
+          "scenario_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "scenario_id",
+          "rate_id",
+          "price_per_share"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "risk_ledger": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "cash_flow_treatment": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "entry_treatment": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "overlap_resolution": {
+            "type": "string"
+          },
+          "rate_treatment": {
+            "type": "string"
+          },
+          "reserve_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "description",
+          "cash_flow_treatment",
+          "rate_treatment",
+          "entry_treatment",
+          "reserve_ids",
+          "overlap_resolution"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "enum": [
+        "buffett-research-v2.5"
+      ],
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "supports": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "url",
+          "published_at",
+          "supports"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "strongest_counterargument": {
+      "type": "string"
+    },
+    "task_scope": {
+      "enum": [
+        "standalone_screen"
+      ],
+      "type": "string"
+    },
+    "ticker": {
+      "type": "string"
+    },
+    "valuation_scenarios": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "assumption_changes": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "basis": {
+                  "type": "string"
+                },
+                "from_central": {
+                  "type": "string"
+                },
+                "scenario_value": {
+                  "type": "string"
+                },
+                "source_ids": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "variable": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "variable",
+                "from_central",
+                "scenario_value",
+                "basis",
+                "source_ids"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "assumptions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "cash_flows": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "distribution_per_share": {
+                  "type": "number"
+                },
+                "year": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "year",
+                "distribution_per_share"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "discount_rate_id": {
+            "type": "string"
+          },
+          "equity_value_per_share": {
+            "type": "number"
+          },
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "enum": [
+              "central",
+              "conservative",
+              "adverse",
+              "floor"
+            ],
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "source_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "survival_assessment": {
+            "type": "string"
+          },
+          "terminal": {
+            "additionalProperties": false,
+            "properties": {
+              "basis": {
+                "type": "string"
+              },
+              "capital_treatment": {
+                "type": "string"
+              },
+              "value_per_share": {
+                "type": "number"
+              },
+              "year": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "year",
+              "value_per_share",
+              "basis",
+              "capital_treatment"
+            ],
+            "type": "object"
+          },
+          "tolerable_errors": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "method",
+          "assumptions",
+          "discount_rate_id",
+          "assumption_changes",
+          "tolerable_errors",
+          "survival_assessment",
+          "cash_flows",
+          "terminal",
+          "equity_value_per_share",
+          "source_ids"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "valuation_status": {
+      "enum": [
+        "supported",
+        "conditional",
+        "unavailable",
+        "not_attempted"
+      ],
+      "type": "string"
+    },
+    "veto_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "ticker",
+    "task_scope",
+    "as_of",
+    "information_cutoff",
+    "currency",
+    "research_status",
+    "business_quality",
+    "valuation_status",
+    "business_summary",
+    "moat_assessment",
+    "veto_reason",
+    "quality_score",
+    "quality_assessment",
+    "missing_evidence",
+    "strongest_counterargument",
+    "entry_conditions",
+    "invalidation_triggers",
+    "opportunity_cost_status",
+    "sources",
+    "cash_flow_bridge",
+    "floor_limitation",
+    "rates",
+    "valuation_scenarios",
+    "return_sensitivity",
+    "entry_policy",
+    "reserves",
+    "risk_ledger",
+    "cross_checks"
+  ],
+  "type": "object"
+}

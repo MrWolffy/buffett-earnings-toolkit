@@ -1,185 +1,158 @@
-# Thinking Tools and Mental Models
+# 01｜思考框架与证据纪律
 
-> When to read this file: when you need a thinking framework entry point, when you're unsure how to approach a complex investment decision, or when discussing the underlying logic of investment philosophy.
+> **版本：2.0｜修订日期：2026-10-22**  
+> 适用：能力圈、研究切入、竞争假设、机会成本、等待与行动。  
+> 来源标记遵循 [SOURCES.md](../SOURCES.md)。未标为 B、M、T 的流程与工具均为项目规则 P。
 
-Buffett's investment success is half from stock selection, half from **the way he thinks about problems**. These thinking tools are the underlying reason he makes the right decisions.
+## 1. 能力圈不是表达能力，而是判断能力
 
----
+**B｜原则。**1996 年股东信把理解所选企业及能力边界置于核心位置；它不要求投资者对整个市场都能作判断。[B-1996](../SOURCES.md#b-1996)
 
-## Circle of Competence
+### 1.1 四层证据测试（P）
 
-**Core: only make decisions in domains you truly understand.**
+| 层次 | 需要回答 | 证据不足时的处理 |
+|---|---|---|
+| 商业结构 | 谁付钱、为什么付钱、谁承担风险、现金何时收到？ | 先补商业模式资料 |
+| 单位经济 | 收入扣除全部维持成本和必要资本后还剩多少？ | 不把收入或 EBITDA 当成经济收益 |
+| 竞争动态 | 客户为什么留下？竞争者进入需要跨过什么障碍？ | 同时研究主要对手与替代方案 |
+| 可预测边界 | 哪些变量能给区间，哪些不能？什么会推翻判断？ | 缩窄结论，必要时停止给买卖意见 |
 
-> "I don't try to jump over 7-foot bars. I look around for 1-foot bars that I can step over."
+语言模型能够复述管理层故事，不代表已经理解。必须指出独立支持证据、与故事不一致的事实，以及资料尚未覆盖的变量。不能声称拥有未实际经历的行业经验。
 
-**What "truly understand" means:**
-- You can clearly explain the profit logic of the business
-- You understand the key variables that affect the industry (2–3, not 20)
-- You can anticipate the rough direction of the competitive landscape over 5–10 years
-- You know what circumstances would make your judgment wrong
+### 1.2 三种合法研究状态
 
-**The boundaries of the circle matter more than its size:**
+**可形成判断：**核心变量能在合理范围内估计，已有支持和反证检验。
 
-> "You only have to be able to evaluate companies within your circle of competence. The size of that circle is not very important; knowing its boundaries, however, is vital."
+**边界区域：**部分经济逻辑清楚，但关键变量仍需核实。可以给条件式分析，不给无条件“适合买入”。
 
-- Admitting "I don't know" is a competitive advantage
-- Analysis outside your circle of competence is more dangerous than no analysis (it creates false confidence)
-- **Act decisively inside the circle, walk away outside it**: hesitating within your area of understanding is the real mistake
-- The circle can be expanded, but it takes time and real experience — not reading a few articles
+**暂不可评估：**重要现金流或风险无法合理界定。解释缺口、可补证方向以及不能得出的结论；不必因此宣布企业没有价值。
 
-**Buffett's honest reflection on missing Amazon:**
-> "I was too dumb. I studied Amazon but didn't buy it. I underestimated the degree to which Bezos could accomplish what he set out to do."
-This is not a failure — it is honesty. He believed Bezos's achievements were beyond the range he could reliably predict.
+不确定性不等于永久不能研究。允许逐步扩大证据覆盖，但不能用更高贴现率、更多小数位或更大折扣伪装理解。
 
----
+## 2. 先区分事实、解释和预测
 
-## Inversion
+建立证据表，而不是先选结论再找名言。
 
-The thinking tool Munger emphasizes most: **don't ask "how do I succeed" — first ask "how do I guarantee failure."**
+| 项目 | 记录方式 |
+|---|---|
+| 事实 | 指标、期间、口径、原始来源；必要时标记是否重述 |
+| 管理层解释 | 明确“管理层称”，不自动视作已经证明 |
+| 分析者推断 | 写出从事实到结论的逻辑链，以及替代解释 |
+| 预测/情景 | 假设范围、为什么可用、影响哪些现金流 |
+| 未知 | 缺失原因、重要程度、能否用区间约束 |
 
-> "Invert, always invert." — Charlie Munger
+一次市场份额下降可能来自主动放弃低质量业务、供给限制、渠道去库存，也可能来自真实竞争失败。不能只靠价格下跌或单季毛利变化完成归因。
 
-**Applying inversion in investing:**
+**可重复方法：**先列至少两个有实质差异的解释，再找能够区分它们的观察。不是为了形式上的“正反各半”，而是降低过早锁定单一故事的风险。
 
-Don't ask: why will this company go up?
-Ask first: **in what ways could this investment lose me money?**
+## 3. 逆向验证：研究失败路径，而非要求没有风险
 
-Five failure paths:
-1. The moat is eroded (technological disruption, regulation, competition)
-2. Management integrity problems
-3. Financial leverage blows up at the bottom of a cycle
-4. Purchase price too high — you lose money even if the company is great
-5. Outside your circle of competence — you simply lack the judgment
+本节是项目的反向检查工具；不将未核实的流行格言作为芒格逐字引语。
 
-**Only when all failure paths are difficult to make a case for should you consider the investment thesis.**
+先写“这笔投资最终为什么可能不划算”，再检查乐观论点。常见路径包括：单位经济恶化、竞争优势被替代、资本需求被低估、管理层配置失误、融资先于经营恢复到期、买价过高，以及对业务的理解本来就是错的。
 
----
+每条路径应有四个要素：**触发条件、传导机制、损失范围、可观察证据**。不能因为列得出风险就否决，也不能因为模型给了低概率就忽略毁灭性后果。
 
-## Mr. Market
+示例：
 
-Graham's metaphor, used by Buffett throughout his life.
+```text
+风险：核心客户转向替代供应商。
+传导：量下降 → 固定成本摊薄不足 → 单位成本上升 → 现金回报下降。
+区分证据：流失原因、合同到期结构、竞品成本、客户迁移后的实际体验。
+估值处理：降低存量续约及新增份额假设，而不是只调高贴现率。
+行动条件：若证据显示原有成本优势已经消失，重新评估持有逻辑。
+```
 
-**Imagine an emotional business partner who quotes you a buy/sell price every day:**
-- Sometimes wildly optimistic, quoting far above the true value of the business
-- Sometimes deeply pessimistic, quoting far below the true value of the business
-- You are under absolutely no obligation to accept his quote
+## 4. 同时检查错误买入与错误放弃
 
-**Key insights:**
-- Mr. Market is a tool that serves you, not a teacher you should follow
-- When he is fearful, he offers you a buying opportunity
-- When he is greedy, he offers you a selling opportunity
-- His quotes are driven by emotion, not related to the intrinsic value of the business
+**B｜遗漏也有成本。**巴菲特在 1989 年的错误回顾中讨论了本来可以理解却没有行动的机会；2022 年信也说明少数出色决定的重要性。[B-1989](../SOURCES.md#b-1989)、[B-2022](../SOURCES.md#b-2022)
 
-> "If your neighbor quoted you a price on his house every day, would you feel depressed just because he was in a bad mood and quoted low today?"
+以下是项目的遗漏检查，不是强迫交易：
 
-> "Mr. Market doesn't mind being ignored. If his quote doesn't interest you today, he'll be back with a new one tomorrow."
+- 我拒绝的是自己无法判断的机会，还是能理解却被武断数字挡住的机会？
+- 等待更低价格，会改善预期回报，还是只是在迎合对某个锚点的执念？
+- 目前的证据和价格是否已经足够，而我还在追求不可能达到的确定性？
+- 买入会不会把组合推入不能承受的集中或流动性风险？
 
-**Historical cases:**
-- **1973 Washington Post**: The Watergate scandal made Mr. Market deeply pessimistic; Buffett bought in for $10.6 million and it grew to hundreds of millions (the intrinsic value never changed)
-- **2008 Financial Crisis**: Mr. Market panicked to the extreme; Buffett deployed $5 billion into Goldman Sachs and $3 billion into GE, securing terms far above normal
+只评估当时凭可获得资料本可作出的选择，不把事后所有上涨股票都记成“错失”。研究中的纪律与事后结果应分开评价。
 
-**The algorithmic era is even more favorable:** High-frequency trading makes short-term market swings more violent than in Graham's era — Mr. Market is now more manic than ever, representing a greater opportunity for patient investors.
+## 5. 市场先生：利用报价，不服从报价
 
-**In practice:** When the market drops sharply, first ask "has the intrinsic value of the company changed?" — not "should I cut my losses?"
+**B｜出处。**1987 年股东信借用格雷厄姆的市场先生比喻，强调报价应服务于投资者，而不是替代企业分析。[B-1987](../SOURCES.md#b-1987)
 
----
+**P｜使用边界。**价格可能反映情绪，也可能包含新信息。不能说市场报价与价值毫无关系，不能假设下跌时内在价值不变，更不能断言算法交易必然扩大错误定价。
 
-## Long-term Orientation
+遇到显著涨跌，分别更新：
 
-> "If you aren't willing to own a stock for ten years, don't even think about owning it for ten minutes."
+1. 企业预期现金流：需求、利润率、资本投入、持续时间是否改变？
+2. 股东权利及生存条件：负债、融资、稀释、法律或监管风险是否改变？
+3. 价格及回报：报价相对于更新后的价值或回报情景是否更有吸引力？
 
-**Why a long-term perspective is a competitive advantage:**
-- Most market participants are driven by quarterly results, creating an arbitrage opportunity for the long-term view
-- The mathematical power of compounding: 10% annualized returns — 2.6x in 10 years, 17x in 30 years
-- **Berkshire's track record (1965–2022, 58 years):** Annual compounding of 19.8% vs. S&P 500's 9.9% — seemingly just a 10-percentage-point gap, but the cumulative result is **3,787,464%** vs. **24,708%** — this is the true face of compounding over time
-- Short-term volatility creates noise; long-term trends reflect fundamentals
-- Frequent trading generates friction costs (taxes, commissions, bad decisions)
+对依赖股权融资、抵押品或市场信心的企业，价格变化还可能通过融资条件反馈到价值。应研究具体机制，不预设价格只产生情绪噪音。
 
-**Scale is the enemy of compounding growth:**
-> "Given our current size, such returns are impossible to sustain. Anyone who thinks otherwise should go into sales, but please, not into mathematics." — 1983 letter
-The larger the assets under management, the harder it is to generate excess returns. This is a mathematical law, not modesty.
+## 6. 时间尺度：跟随经济命题，而不是统一十年
 
-**Three prerequisites (all must be met simultaneously):**
-1. The business has a durable moat and competitive advantage
-2. Management is both capable and honest, with strong capital allocation ability
-3. Purchased at a reasonable price below intrinsic value
+长期复利企业要研究优势和现金流的持久性；事件驱动证券要研究事件期限与失败后果；资源类或收缩业务要研究剩余寿命与最终收回的现金。
 
-> "When we own portions of outstanding businesses with outstanding managements, our favorite holding period is forever." — 1988 letter
+长期视角意味着不以短期报价替代基本面，但并不意味着忽视季度证据。关键客户流失、监管变化或资金链收紧，可能在短期内改变长期价值。
 
-**When it does not apply:** When the moat is destroyed, management deteriorates, or the price is severely overvalued. For mediocre businesses, time is an enemy, not a friend.
+增长慢的企业可能持续输出现金；增长快的企业也可能不断消耗资本。要问资本去哪里、回报归谁，而不是把“增长”与“复利”画等号。
 
-> "What Coca-Cola and American Express have taught us is this: when you find a truly wonderful business, stick with it. Patience pays, and one wonderful business can offset the many mediocre decisions that are inevitable." — 2023 letter
+## 7. 多角度思考：有因果机制才使用模型
 
----
+**M｜可核实的思想影响。**巴菲特在 2023 年度信的芒格回顾中，把转向以合理价格购买优秀企业的重要影响归于芒格。[B-2023](../SOURCES.md#b-2023)
 
-## Munger's Lattice of Mental Models
+下面的多角度检查属于项目工具，不声称是芒格亲自规定的完整模型表：
 
-Munger's greatest influence on Buffett: **looking at the same problem from the perspective of multiple disciplines.**
+| 角度 | 有用的问题 | 误用方式 |
+|---|---|---|
+| 激励与组织行为 | 个人获得什么奖励，谁承担损失？ | 把所有错误都归为恶意 |
+| 竞争与经济学 | 超额收益为什么没有被竞争消除？ | 只贴“网络效应”标签 |
+| 概率与决策 | 哪些不利路径会改变行动，哪些可以承受？ | 编造精确概率和期望回报 |
+| 工程与系统 | 哪个环节失效会导致连锁反应？ | 用类比替代业务证据 |
+| 会计与现金 | 哪些利润已经变成现金，哪些仍需投入？ | 一律相信或一律否定调整后指标 |
+| 资本配置 | 下一元资本放在哪里最有价值？ | 认为增长、回购或分红天然优先 |
 
-> "You need to have a latticework of mental models in your head, and then hang your actual experience on that latticework." — Munger
+模型应减少盲点，而不是增加术语。找不到实际传导机制的类比，不进入估值。
 
-**The most useful cross-disciplinary models in investing:**
+## 8. 独立思考不是习惯性反对市场
 
-| Discipline | Model | Investment Application |
-|-----|-----|---------|
-| Physics | Critical mass | When network effects explode |
-| Biology | Ecological niche | Efficient scale moat |
-| Psychology | Social proof, loss aversion | Opportunities during market panic |
-| Mathematics | Compounding, probability | Long-term return and risk quantification |
-| Economics | Opportunity cost | Every investment competes with the best alternative |
-| Chemistry | Catalyst | What trigger is needed to unlock value |
+先判断市场价格隐含了什么预期，再说明自己在哪个关键变量上不同，以及为什么证据更有说服力。市场多数人的看法可能正确；反共识本身不构成优势。
 
-**Munger's core warning:**
-> "To the man with only a hammer, every problem looks like a nail."
-Having a diverse set of mental models is what prevents the blind spots of a single perspective.
+尽量对比不同利益位置的证据：公司管理层、竞争者、客户、供应商和监管披露。各自都有偏差，不能把“来自公司”当成独立验证。
 
----
+更新判断时，不只关注支持原观点的新闻。主动写出最强反方论点，回答它，而不是选择最容易反驳的版本。
 
-## Independent Thinking
+## 9. 机会成本与个人能力有关
 
-> "You're not right because others agree with you, and you're not wrong because others disagree with you. You're right because your data and reasoning are right."
+**B/M｜原则。**2003 年股东大会的讨论强调比较资本用途，并把机会成本放在自身实际能力和机会集合中理解。[A-2003-PM](../SOURCES.md#a-2003-pm)
 
-**The danger of groupthink:**
-- Wall Street consensus is often right, but wrong at critical moments (extreme fear or extreme greed)
-- The best investment opportunities usually arise when most people are afraid to buy
-- Ideas that are mocked by the crowd are often the source of excess returns
+**P｜项目实现。**发生实际机会成本或换仓问题时，先读取用户 Longbridge 当前持仓。具体执行以 [06 第 9 节](06-valuation-capital.md) 为准；不能把此前讨论过的公司推定为用户实际持仓。
 
-**How to maintain independence:**
-- Analyze for yourself first, then look at others' views
-- Don't change a well-reasoned judgment just because "everyone says so"
-- But also don't reject contrary opinions just because "I want it to be right"
+比较不只看一个回报中值，还要看判断可靠性、不利情境、资金可用性、集中风险和交易摩擦。所谓更好，应能在合理的假设扰动后仍有说服力，而非只高出模型中几个小数点。
 
-**Buffett's method:** Working in Omaha, not on Wall Street — physical distance helps him stay away from market noise and herd sentiment.
+“与已有持仓比较”不是禁止新机会；它是防止忽视最了解、已可执行的替代用途。
 
----
+## 10. 等待与行动都需要理由
 
-## Opportunity Cost Awareness
+等待应写明等待什么：价格、证据、融资风险消退，还是组合腾出风险容量。没有触发条件的等待容易变成拖延。
 
-Every investment decision is implicitly competing with the best alternative investment you could make.
+买入应写明为什么现在的价格与证据已经足够；不应因为现金闲置太久而降低标准。继续持有也应有独立理由，不能只说成本低、曾经判断过或卖出会显得认错。
 
-> "I always have a hurdle rate in my head. Every investment opportunity has to compete against it."
+## 11. 决策记录模板（P）
 
-**In practice:**
-- Holding cash is also a decision — it has an opportunity cost
-- Holding a mediocre stock means giving up the opportunity to hold an outstanding one
-- When buying back shares, the comparison is "buyback" vs. "a better acquisition opportunity"
+```text
+研究日期 / 数据截至日：
+对象及策略类型：
+核心问题与当前行动：
+关键事实及来源：
+核心假设 / 相应反证：
+企业价值或回报的主要驱动：
+最坏的可界定路径 / 尚不能界定的风险：
+实际替代方案及账户读取状态（适用时）：
+未选择其他行动的原因：
+下次应核实什么：
+结论改变需要哪些新证据：
+```
 
-**Munger's standard:**
-> "Our standard for decisions is not 'is this good enough?' but 'is this the best option available?'"
-
----
-
-## Patience as Edge
-
-> "The stock market is a device for transferring money from the impatient to the patient."
-
-**Buffett's waiting cases:**
-- 1969: Dissolved his partnership fund, believing the market offered no reasonably priced opportunities, and chose to wait
-- 2008 Financial Crisis: Made large purchases at the peak of fear (Goldman Sachs, GE)
-- Held Coca-Cola for over 30 years, unmoved by stock price swings or analyst recommendations
-
-**The right mindset for waiting:**
-- It is not idleness — it is waiting in a state of "ready to act at any moment"
-- When the opportunity arrives, act decisively and size up, rather than lowering your standards because "you've waited too long"
-
----
+后续复盘记录“旧判断 → 新证据 → 假设变化 → 行动变化”。区分信息更新、原先研究错误和纯粹报价变化，不悄悄重写历史逻辑。
